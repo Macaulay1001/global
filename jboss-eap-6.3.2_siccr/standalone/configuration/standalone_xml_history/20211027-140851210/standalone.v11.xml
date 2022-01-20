@@ -1,0 +1,1719 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<server xmlns="urn:jboss:domain:1.6">
+
+    <extensions>
+        <extension module="org.jboss.as.clustering.infinispan"/>
+        <extension module="org.jboss.as.clustering.jgroups"/>
+        <extension module="org.jboss.as.cmp"/>
+        <extension module="org.jboss.as.connector"/>
+        <extension module="org.jboss.as.deployment-scanner"/>
+        <extension module="org.jboss.as.ee"/>
+        <extension module="org.jboss.as.ejb3"/>
+        <extension module="org.jboss.as.jacorb"/>
+        <extension module="org.jboss.as.jaxr"/>
+        <extension module="org.jboss.as.jaxrs"/>
+        <extension module="org.jboss.as.jdr"/>
+        <extension module="org.jboss.as.jmx"/>
+        <extension module="org.jboss.as.jpa"/>
+        <extension module="org.jboss.as.jsf"/>
+        <extension module="org.jboss.as.jsr77"/>
+        <extension module="org.jboss.as.logging"/>
+        <extension module="org.jboss.as.mail"/>
+        <extension module="org.jboss.as.messaging"/>
+        <extension module="org.jboss.as.modcluster"/>
+        <extension module="org.jboss.as.naming"/>
+        <extension module="org.jboss.as.pojo"/>
+        <extension module="org.jboss.as.remoting"/>
+        <extension module="org.jboss.as.sar"/>
+        <extension module="org.jboss.as.security"/>
+        <extension module="org.jboss.as.threads"/>
+        <extension module="org.jboss.as.transactions"/>
+        <extension module="org.jboss.as.web"/>
+        <extension module="org.jboss.as.webservices"/>
+        <extension module="org.jboss.as.weld"/>
+        <extension module="org.keycloak.keycloak-adapter-subsystem"/>
+    </extensions>
+
+    <system-properties>
+        <property name="simulaSIRIC" value="true"/>
+        <property name="SIFEC_SISGD_CONTENT_TYPE_PROPOSICOES" value="NO_SIFEC_001"/>
+        <property name="SIFEC_SISGD_NU_SEGTO" value="4204"/>
+        <property name="SIFEC_SISGD_SERVER_NAME" value="GED_DES"/>
+        <property name="SIFEC_SISGD_USER" value="SFECD001"/>
+        <property name="SIFEC_SISGD_PASSWORD" value="sfecd001"/>
+        <property name="SIFEC_NOME_SISTEMA" value="SIFEC"/>
+        <property name="TESTE_MOCK_CONSULTA_CONVENENTE" value="true"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_CONVENENTE" value="*CONSULTA-CONVENIO-SAIDA%*MENSAGEM IC-ERRO='0' PROGRAMA-ME=' ' PARAGRAFO-ME=' ' CATEGORIA-ME=' ' CODIGO-ME=' ' SEVERIDADE-ME=' ' MSG-SISTEMA-ME=' ' MSG-NEGOCIAL-ME=' '%*/MENSAGEM%*CONVENENTE CNPJ='00360305000104'%*CONVENIOS%*CONVENIO CO-CONVENIO='1' NO-CONVENIO='CAIXA ECONOMICA FEDERAL' PZ-MAX='120' IC-ATIVO='S' DE-IC-ATIVO='CONVENIO ATIVO' CO-SERPRO=' ' TP-PORTAL='7'%*TAXAS%*CONTRATACAO%*TAXA PZ-INI='1' PZ-FIM='120'%*FAIXAS%*FAIXA CO-FAIXA='1' VR='1.55000'%*/FAIXA%*FAIXA CO-FAIXA='2' VR='1.55000'%*/FAIXA%*FAIXA CO-FAIXA='3' VR='1.55000'%*/FAIXA%*/FAIXAS%*/TAXA%*/CONTRATACAO%*RENOVACAO%*TAXA PZ-INI='1' PZ-FIM='120'%*FAIXAS%*FAIXA CO-FAIXA='1' VR='1.55000'%*/FAIXA%*FAIXA CO-FAIXA='2' VR='1.55000'%*/FAIXA%*FAIXA CO-FAIXA='3' VR='1.55000'%*/FAIXA%*/FAIXAS%*/TAXA%*/RENOVACAO%*/TAXAS%*/CONVENIO%*/CONVENIOS%*/CONVENENTE%*/CONSULTA-CONVENIO-SAIDA%"/>
+        <property name="TESTE_MOCK_CONSULTA_MARGEM_DB1" value="true"/>
+        <property name="MOCK_TOKEN" value="false"/>
+        <property name="TESTE_MOCK_XML_SICLI" value="*?xml version='1.0' encoding='UTF-8'?%*consultacliente:SERVICO_SAIDA xmlns:consultacliente='http://caixa.gov.br/sibar/consultacliente' xmlns:sibar_base='http://caixa.gov.br/sibar'%*sibar_base:HEADER%*VERSAO%1.0*/VERSAO%*AUTENTICACAO%MA==*/AUTENTICACAO%*USUARIO_SERVICO%SFECEMPD*/USUARIO_SERVICO%*USUARIO%C891843*/USUARIO%*OPERACAO%CPF*/OPERACAO%*INDICE%0*/INDICE%*SISTEMA_ORIGEM%SIAPX*/SISTEMA_ORIGEM%*UNIDADE%664*/UNIDADE%*DATA_HORA%2016-02-18T16:57:00-03:00*/DATA_HORA%*ID_PROCESSO%CPF*/ID_PROCESSO%*/sibar_base:HEADER%*COD_RETORNO%01*/COD_RETORNO%*ORIGEM_RETORNO%SICLI_CLIPO170*/ORIGEM_RETORNO%*MSG_RETORNO%*/MSG_RETORNO%*DADOS%*RET_CLIENTE_DETALHADO%*PROXIMO_CAMPO%*/PROXIMO_CAMPO%*CAMPOS_RETORNADOS%*COCLI_ATIVO%*COCLI_ATIVO%6180030474618*/COCLI_ATIVO%*FLAG_DADOS_MIN_INCOMPL%N*/FLAG_DADOS_MIN_INCOMPL%*NIVEL_CADASTRO%080*/NIVEL_CADASTRO%*/COCLI_ATIVO%*NOME_CLIENTE%*NOME%JOAO PAULO PEREIRA SILVA*/NOME%*/NOME_CLIENTE%*DT_NASCIMENTO%*DATA%1985-06-26*/DATA%*/DT_NASCIMENTO%*NOME_PAI%*NOME%PAI TESTE*/NOME%*/NOME_PAI%*NOME_MAE%*NOME%LUZIA OLIVEIRA PEREIRA*/NOME%*/NOME_MAE%*SEXO%*SEXO%M*/SEXO%*/SEXO%*CPF%*OCORRENCIA%1*/OCORRENCIA%*DOC%*NUMERO%722699877*/NUMERO%*DV%72*/DV%*/DOC%*FLAG_TITULAR%3*/FLAG_TITULAR%*FLAG_REGULARIDADE%0*/FLAG_REGULARIDADE%*FLAG_CONSISTENCIA%3*/FLAG_CONSISTENCIA%*/CPF%*ESTADO_CIVIL%*ESTADO_CIVIL%1*/ESTADO_CIVIL%*/ESTADO_CIVIL%*MEIO_COMUNICACAO%*OCORRENCIA%1*/OCORRENCIA%*PRODUTO%0*/PRODUTO%*CONTRATO%*/CONTRATO%*MEIO_COMUNICACAO%11*/MEIO_COMUNICACAO%*PREFIXO_DISCAGEM%61*/PREFIXO_DISCAGEM%*COD_COMUNICACAO%32066869*/COD_COMUNICACAO%*NOME_CONTATO%*/NOME_CONTATO%*FINALIDADE%0*/FINALIDADE%*FLAG_COMUNICACAO%N*/FLAG_COMUNICACAO%*FLAG_PROPAGANDA%N*/FLAG_PROPAGANDA%*FLAG_COMPROVACAO%N*/FLAG_COMPROVACAO%*DT_APURACAO%2016-01-15*/DT_APURACAO%*/MEIO_COMUNICACAO%*ENDERECO_NACIONAL%*OCORRENCIA%1*/OCORRENCIA%*PRODUTO%0*/PRODUTO%*CONTRATO%*/CONTRATO%*TP_LOGRADOURO%ACA*/TP_LOGRADOURO%*LOGRADOURO%SQS 102*/LOGRADOURO%*NUMERO%*/NUMERO%*COMPLEMENTO%*/COMPLEMENTO%*BAIRRO%ASA SUL*/BAIRRO%*MUNICIPIO%530010*/MUNICIPIO%*NOME_MUNICIPIO%BRASILIA*/NOME_MUNICIPIO%*CEP%70330040*/CEP%*UF%DF*/UF%*FLAG_FINALIDADE%1*/FLAG_FINALIDADE%*FLAG_CORRESPONDENCIA%N*/FLAG_CORRESPONDENCIA%*FLAG_PROPAGANDA%N*/FLAG_PROPAGANDA%*/ENDERECO_NACIONAL%*ENDERECO_NACIONAL_COMP%*OCORRENCIA%1*/OCORRENCIA%*PRODUTO%0*/PRODUTO%*CONTRATO%*/CONTRATO%*FLAG_COMPROVACAO%N*/FLAG_COMPROVACAO%*FLAG_POSTAGEM%N*/FLAG_POSTAGEM%*TP_ENDERECO%G*/TP_ENDERECO%*FLAG_SIMPLIFICADO%N*/FLAG_SIMPLIFICADO%*FLAG_DEVOLVIDO%N*/FLAG_DEVOLVIDO%*TP_DEVOLUCAO%0*/TP_DEVOLUCAO%*FLAG_UNICO%*/FLAG_UNICO%*SEQUENCIAL%1*/SEQUENCIAL%*MES_REF%1*/MES_REF%*ANO_REF%2016*/ANO_REF%*DT_APURACAO%2016-01-15*/DT_APURACAO%*TP_IMOVEL%5*/TP_IMOVEL%*/ENDERECO_NACIONAL_COMP%*NATURALIDADE%*MUNICIPIO%5300108*/MUNICIPIO%*UF%DF*/UF%*/NATURALIDADE%*TP_PESSOA%*TP_PESSOA%1*/TP_PESSOA%*/TP_PESSOA%*RESPONSAVEL_CARTEIRA%*MATRICULA%0029442*/MATRICULA%*NOME%AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/NOME%*CARGO%0*/CARGO%*AGENCIA%0647*/AGENCIA%*CARTEIRA%FN16*/CARTEIRA%*FUNCAO%2171*/FUNCAO%*/RESPONSAVEL_CARTEIRA%*CARTEIRA_CLIENTE%*DESC_COD_SUBSEG%ESSENCIAL*/DESC_COD_SUBSEG%*DESC_SEGMENTO%ESSENCIAL*/DESC_SEGMENTO%*COD_SUBSEG%1*/COD_SUBSEG%*TP_CARTEIRA%P*/TP_CARTEIRA%*AGENCIA%647*/AGENCIA%*CARTEIRA_PRINCIPAL%FN16*/CARTEIRA_PRINCIPAL%*CARTEIRA_SECUNDARIA%FN01*/CARTEIRA_SECUNDARIA%*SEGMENTO%1*/SEGMENTO%*/CARTEIRA_CLIENTE%*GRAU_INSTRUCAO%*GRAU_INSTRUCAO%9*/GRAU_INSTRUCAO%*/GRAU_INSTRUCAO%*PROFISSAO_SIRIC%*DESCRICAO_PROFISSAO%TECNICO EM AGRONOMIA E AGRIMENSURA*/DESCRICAO_PROFISSAO%*PROFISSAO%153*/PROFISSAO%*PROF_PRINCIPAL%S*/PROF_PRINCIPAL%*/PROFISSAO_SIRIC%*RENDA%*OCORRENCIA%1*/OCORRENCIA%*DESC_TP_RENDA%*/DESC_TP_RENDA%*DESC_COD_OCUP%*/DESC_COD_OCUP%*TP_RENDA%F*/TP_RENDA%*CARACTER_RENDA%2*/CARACTER_RENDA%*COCLI_FP%0*/COCLI_FP%*TP_FP%*/TP_FP%*CPF_CNPJ_FP%*/CPF_CNPJ_FP%*VR_RENDA_BRUTA%0.00*/VR_RENDA_BRUTA%*VR_RENDA_LIQUIDA%0.00*/VR_RENDA_LIQUIDA%*MES_REF%1*/MES_REF%*ANO_REF%2016*/ANO_REF%*QT_ANO%0*/QT_ANO%*QT_MES%0*/QT_MES%*ANO_DESLIGAMENTO%0*/ANO_DESLIGAMENTO%*DT_APURACAO%2016-01-15*/DT_APURACAO%*PARTICIP_EMP%0.00*/PARTICIP_EMP%*COD_OCUPACAO%0*/COD_OCUPACAO%*VR_IRPF%0.00*/VR_IRPF%*COD_COMPR_COMPROBATORIO_RF%0*/COD_COMPR_COMPROBATORIO_RF%*FLAG_COMPR_RENDA_RI%*/FLAG_COMPR_RENDA_RI%*/RENDA%*CARTEIRA_GRC%*AGENCIA%647*/AGENCIA%*CARTEIRA%FN16*/CARTEIRA%*PV_GERENTE_REF%1*/PV_GERENTE_REF%*CARTEIRA_ANTERIOR%*/CARTEIRA_ANTERIOR%*MOTIVO%0*/MOTIVO%*/CARTEIRA_GRC%*DOCUMENTO_IDENTIFICACAO%*CODIGO_CAMPO_IDENTIFICACAO%372*/CODIGO_CAMPO_IDENTIFICACAO%*TIPO%8*/TIPO%*SEQUENCIAL%2*/SEQUENCIAL%*/DOCUMENTO_IDENTIFICACAO%*IDENTIDADE%*OCORRENCIA%2*/OCORRENCIA%*DESC_ORG_EMISSOR%SECRETARIA DE SEGURANCA PUBLICA*/DESC_ORG_EMISSOR%*SIGLA_ORG_EMISSOR%SSP*/SIGLA_ORG_EMISSOR%*DOC%*ORGAO_EMISSOR%10*/ORGAO_EMISSOR%*NUMERO%1236654*/NUMERO%*UF%DF*/UF%*DT_EMISSAO%2010-01-01*/DT_EMISSAO%*/DOC%*FLAG_DOC_IDENTIFICACAO_PRINCIPAL%S*/FLAG_DOC_IDENTIFICACAO_PRINCIPAL%*TP_DOCUMENTO%8*/TP_DOCUMENTO%*SUBTIPO_DOCUMENTO%CI*/SUBTIPO_DOCUMENTO%*/IDENTIDADE%*/CAMPOS_RETORNADOS%*/RET_CLIENTE_DETALHADO%*/DADOS%*/consultacliente:SERVICO_SAIDA%"/>
+        <property name="TESTE_MOCK_CONSULTA_MARGEM_MPOG" value="false"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_MARGEM_MPOG" value="*?xml version='1.0' encoding='iso-8859-1'?%*response%*dados_matricula%*cd_orgao%17000*/cd_orgao%*nr_cnpj_orgao%00394460018512*/nr_cnpj_orgao%*cd_matricula%0000433*/cd_matricula%*id_unica%0000433*/id_unica%*org_mat_inst%*/org_mat_inst%*vl_margem_consig%000000000000000*/vl_margem_consig%*vl_margem_utiliz%000000000000000*/vl_margem_utiliz%*vl_margem_disp%00000735000*/vl_margem_disp%*vl_margem_fixa%000000000000000*/vl_margem_fixa%*vl_margem_var%000000000000000*/vl_margem_var%*vl_margem_disp_fixa%000000000000000*/vl_margem_disp_fixa%*dt_prim_desc%201707*/dt_prim_desc%*cd_upag_serv%17000000052909*/cd_upag_serv%*cd_uf_upag_serv%DF*/cd_uf_upag_serv%*bloqueio_judicial%N*/bloqueio_judicial%*cd_ret_code_matricula%0000*/cd_ret_code_matricula%*ds_ret_code_matricula%*/ds_ret_code_matricula%*/dados_matricula%*dados_matricula%*cd_orgao%40111*/cd_orgao%*nr_cnpj_orgao%00394411004368*/nr_cnpj_orgao%*cd_matricula%0000433*/cd_matricula%*id_unica%0000433*/id_unica%*org_mat_inst%*/org_mat_inst%*vl_margem_consig%000000000000000*/vl_margem_consig%*vl_margem_utiliz%000000000000000*/vl_margem_utiliz%*vl_margem_disp%00000000000*/vl_margem_disp%*vl_margem_fixa%000000000000000*/vl_margem_fixa%*vl_margem_var%000000000000000*/vl_margem_var%*vl_margem_disp_fixa%000000000000000*/vl_margem_disp_fixa%*dt_prim_desc%201706*/dt_prim_desc%*cd_upag_serv%40111000000015*/cd_upag_serv%*cd_uf_upag_serv%DF*/cd_uf_upag_serv%*bloqueio_judicial%N*/bloqueio_judicial%*cd_ret_code_matricula%0000*/cd_ret_code_matricula%*ds_ret_code_matricula%*/ds_ret_code_matricula%*/dados_matricula%*cd_ret_code%0000*/cd_ret_code%*ds_ret_code%Serviço realizado com sucesso.*/ds_ret_code%*/response%"/>
+        <property name="TESTE_MOCK_INCLUIR_CONTRATO_MPOG" value="false"/>
+        <property name="TESTE_MOCK_XML_INCLUIR_CONTRATO_MPOG" value="*?xml version='1.0' encoding='ISO-8859-1'?% *SOAP-ENV:Envelope SOAP-ENV:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/' xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'% *SOAP-ENV:Body% *ns1:incluirContratoV1Response xmlns:ns1='urn:consignataria'% *return xsi:type='xsd:string'% &lt;?xml version='1.0' encoding='iso-8859-1'?>&lt;response> &lt;nm_serv>MOZART CARRIJO&lt;/nm_serv> &lt;cd_bco_serv>999&lt;/cd_bco_serv> &lt;cd_age_serv>9999&lt;/cd_age_serv> &lt;cd_ccs_serv>999&lt;/cd_ccs_serv> &lt;in_sit_serv>1 - NORMAL&lt;/in_sit_serv> &lt;in_class_serv>1 - ESTAVEL&lt;/in_class_serv> &lt;im_foto>/fotos/mp_mp_99072_01407511.jpg&lt;/im_foto> &lt;nr_contrato>150109576&lt;/nr_contrato> &lt;seq_contrato>4&lt;/seq_contrato> &lt;vl_bruto>000000000010000&lt;/vl_bruto> &lt;dt_prim_desc>201411&lt;/dt_prim_desc> &lt;data_operacao>20141015&lt;/data_operacao> &lt;cd_ret_code>0&lt;/cd_ret_code> &lt;ds_ret_code>I0000 - Serviço realizado com sucesso.&lt;/ds_ret_code>&lt;/response> */return% */ns1:incluirContratoV1Response% */SOAP-ENV:Body% */SOAP-ENV:Envelope%"/>
+        <property name="TESTE_MOCK_CANCELAR_CONTRATO_MPOG" value="false"/>
+        <property name="TESTE_MOCK_RENOVAR_CONTRATO_MPOG" value="false"/>
+        <property name="SIAPX_WS_SERVIDOR_DB1_PASSWORD" value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+        <property name="SIAPX_WS_DB1_COD_CONVENIO" value="3697246"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_MARGEM_DB1" value="*?xml version='1.0' encoding='UTF-8'?%*soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'%*soapenv:Body%*executarOperacaoResponse xmlns='http://services.consignet.db1.com.br'%*executarOperacaoReturn%*webservice%*acao%RETORNO*/acao%*operacao%CONSULTAR_MARGEM_CPF*/operacao%*versao%1.0*/versao%*atributos%*atributo%*nome%COD_RETORNO*/nome%*valor%0*/valor%*/atributo%*atributo%*nome%DESC_RETORNO*/nome%*valor%Sucesso.*/valor%*/atributo%*/atributos%*funcionarios%*funcionarios%*convenio%3697246*/convenio%*origem%1*/origem%*matricula%001001001*/matricula%*folhaPagamento%201704*/folhaPagamento%*CNPJ%85660606000106*/CNPJ%*dataCorte%10*/dataCorte%*margemDisponivel%662.91*/margemDisponivel%*/funcionarios%*/funcionarios%*/webservice%*/executarOperacaoReturn%*/executarOperacaoResponse%*/soapenv:Body%*/soapenv:Envelope%"/>
+        <property name="TESTE_MOCK_RESERVA_MARGEM_DB1" value="false"/>
+        <property name="TESTE_MOCK_XML_RESERVA_MARGEM_DB1" value="*soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'%*soapenv:Body%*executarOperacaoResponse xmlns='http://services.consignet.db1.com.br'%*executarOperacaoReturn%*webservice%*acao%RETORNO*/acao%*operacao%RESERVA_EMPRESTIMO*/operacao%*versao%1.0*/versao%*atributos%*atributo%*nome%COD_RETORNO*/nome%*valor%0*/valor%*/atributo%*atributo%*nome%DESC_RETORNO*/nome%*valor%Sucesso.*/valor%*/atributo%*atributo%*nome%CONTRATO*/nome%*valor%28820049*/valor%*/atributo%*atributo%*nome%FOLHA_DESCONTO*/nome%*valor%201602*/valor%*/atributo%*/atributos% */webservice%*/executarOperacaoReturn%*/executarOperacaoResponse%*/soapenv:Body%*/soapenv:Envelope%"/>
+        <property name="TESTE_MOCK_INCLUIR_CONTRATO_DB1" value="false"/>
+        <property name="TESTE_MOCK_CANCELAR_CONTRATO_DB1" value="false"/>
+        <property name="SIAPX_WS_ZETRA_CODIGO_VERBA" value="0647EMPRESTIMO PESSOAL"/>
+        <property name="SIAPX_WS_ZETRA_CONVENIO" value="10427080548000145"/>
+        <property name="SIAPX_WS_ZETRA_PASSWORD_SERVIDOR" value="xxxxxxxxxxxxxxx"/>
+        <property name="SIAPX_WS_ZETRA_SERVICO_CODIGO" value="046"/>
+        <property name="TESTE_MOCK_CONSULTA_PARAMETROS_ZETRA" value="false"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_PARAMETROS_ZETRA" value="*?xml version='1.0' encoding='UTF-8'?%*soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'%*soapenv:Body%*ns13:consultarParametrosResponse xmlns:ns13='HostaHostService'%*ns13:sucesso%true*/ns13:sucesso%*ns13:codRetorno%000*/ns13:codRetorno%*ns13:mensagem%Operacao realizada com sucesso.*/ns13:mensagem%*ns13:parametroSet%*ns10:svcDescricao xmlns:ns10='ParametroSet'%EMPRESTIMO PESSOAL*/ns10:svcDescricao%*ns10:tamMinMatriculaServidor xmlns:ns10='ParametroSet'%8*/ns10:tamMinMatriculaServidor%*ns10:tamMaxMatriculaServidor xmlns:ns10='ParametroSet'%0*/ns10:tamMaxMatriculaServidor%*ns10:qtdMaxParcelas xmlns:ns10='ParametroSet'%48*/ns10:qtdMaxParcelas%*ns10:exigeCpfMatriculaPesquisa xmlns:ns10='ParametroSet'%true*/ns10:exigeCpfMatriculaPesquisa%*ns10:validaCpfPesquisa xmlns:ns10='ParametroSet'%true*/ns10:validaCpfPesquisa%*ns10:exigeTac xmlns:ns10='ParametroSet'%false*/ns10:exigeTac%*ns10:exigeCadMensVinc xmlns:ns10='ParametroSet'%false*/ns10:exigeCadMensVinc%*ns10:exigeCadVlrLiberado xmlns:ns10='ParametroSet'%true*/ns10:exigeCadVlrLiberado%*ns10:exigeIof xmlns:ns10='ParametroSet'%false*/ns10:exigeIof%*ns10:validaDataNascReserva xmlns:ns10='ParametroSet'%false*/ns10:validaDataNascReserva%*ns10:exigeInfoBancaria xmlns:ns10='ParametroSet'%false*/ns10:exigeInfoBancaria%*ns10:validaInfoBancaria xmlns:ns10='ParametroSet'%false*/ns10:validaInfoBancaria%*ns10:alteraAutMargemNegativa xmlns:ns10='ParametroSet'%false*/ns10:alteraAutMargemNegativa%*ns10:exigeSenhaServReservarRenegociar xmlns:ns10='ParametroSet'%false*/ns10:exigeSenhaServReservarRenegociar%*ns10:exigeSenhaServConsMargem xmlns:ns10='ParametroSet'%false*/ns10:exigeSenhaServConsMargem%*ns10:exigeSenhaServAltContrato xmlns:ns10='ParametroSet'%false*/ns10:exigeSenhaServAltContrato%*ns10:permiteAltContrato xmlns:ns10='ParametroSet'%true*/ns10:permiteAltContrato%*ns10:permiteRenegociarContrato xmlns:ns10='ParametroSet'%true*/ns10:permiteRenegociarContrato%*ns10:qtdMinPrdPgsParaRenegociarAut xmlns:ns10='ParametroSet'%0*/ns10:qtdMinPrdPgsParaRenegociarAut%*ns10:visualizaMargem xmlns:ns10='ParametroSet'%true*/ns10:visualizaMargem%*ns10:visualizaMargemNegativa xmlns:ns10='ParametroSet'%true*/ns10:visualizaMargemNegativa%*ns10:diaCorte xmlns:ns10='ParametroSet'%1*/ns10:diaCorte%*ns10:periodoAtual xmlns:ns10='ParametroSet'%2017-04-01-03:00*/ns10:periodoAtual%*ns10:permiteCompraContrato xmlns:ns10='ParametroSet'%true*/ns10:permiteCompraContrato%*ns10:diasInfoSaldoDevedor xmlns:ns10='ParametroSet'%0*/ns10:diasInfoSaldoDevedor%*ns10:diasAprovSaldoDevedor xmlns:ns10='ParametroSet'%0*/ns10:diasAprovSaldoDevedor%*ns10:diasInfoPgSaldoDevedor xmlns:ns10='ParametroSet'%0*/ns10:diasInfoPgSaldoDevedor%*ns10:diasLiquidacaoAdeCompra xmlns:ns10='ParametroSet'%0*/ns10:diasLiquidacaoAdeCompra%*/ns13:parametroSet%*/ns13:consultarParametrosResponse%*/soapenv:Body%*/soapenv:Envelope%"/>
+        <property name="TESTE_MOCK_CONSULTA_MARGEM_ZETRA" value="false"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_MARGEM_ZETRA" value="*?xml version='1.0' encoding='UTF-8'?%*soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'%*soapenv:Body%*ns13:consultarMargemResponse xmlns:ns13='HostaHostService'%*ns13:sucesso%true*/ns13:sucesso%*ns13:codRetorno%359*/ns13:codRetorno%*ns13:mensagem%Valor da parcela informado Ã© maior do que margem disponivel.: R$7440,15*/ns13:mensagem%*ns13:infoMargem%*ns6:estabelecimentoCodigo xmlns:ns6='InfoMargem'%001*/ns6:estabelecimentoCodigo%*ns6:estabelecimento xmlns:ns6='InfoMargem'%PREFEITURA MUNICIPAL DE BAURU*/ns6:estabelecimento%*ns6:orgaoCodigo xmlns:ns6='InfoMargem'%001000*/ns6:orgaoCodigo%*ns6:orgao xmlns:ns6='InfoMargem'%GABINETE DO PREFEITO*/ns6:orgao%*ns6:categoria xmlns:ns6='InfoMargem'%ESTATUTARIO - AGENTE SOCIAL*/ns6:categoria%*ns6:servidor xmlns:ns6='InfoMargem'%JOSE SILVA 01*/ns6:servidor%*ns6:cpf xmlns:ns6='InfoMargem'%541.878.673-33*/ns6:cpf%*ns6:matricula xmlns:ns6='InfoMargem'%27594*/ns6:matricula%*ns6:dataNascimento xmlns:ns6='InfoMargem'%1983-08-11-03:00*/ns6:dataNascimento%*ns6:prazoServidor xmlns:ns6='InfoMargem'%0*/ns6:prazoServidor%*ns6:valorMargem xmlns:ns6='InfoMargem'%7440.15*/ns6:valorMargem%*ns6:textoMargem xmlns:ns6='InfoMargem'%*/ns6:textoMargem%*ns6:valorMargem2 xmlns:ns6='InfoMargem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:nil='1' /%*ns6:textoMargem2 xmlns:ns6='InfoMargem'%*/ns6:textoMargem2%*ns6:valorMargem3 xmlns:ns6='InfoMargem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:nil='1' /%*ns6:textoMargem3 xmlns:ns6='InfoMargem'%*/ns6:textoMargem3%*/ns13:infoMargem%*/ns13:consultarMargemResponse%*/soapenv:Body%*/soapenv:Envelope%"/>
+        <property name="TESTE_MOCK_RESERVA_MARGEM_ZETRA" value="false"/>
+        <property name="TESTE_MOCK_XML_RESERVA_MARGEM_ZETRA" value="*?xml version='1.0' encoding='UTF-8'?%*soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'%*soapenv:Body%*ns10:reservarMargemResponse xmlns:ns10='HostaHostService'%*ns10:sucesso%true*/ns10:sucesso%*ns10:codRetorno%000*/ns10:codRetorno%*ns10:mensagem%Operação realizada com sucesso.*/ns10:mensagem%*ns10:boleto%*ns1:servidor xmlns:ns1='Boleto'%JOSE MARIA DA SILVA 01*/ns1:servidor%*ns1:cpf xmlns:ns1='Boleto'%436.061.657-06*/ns1:cpf%*ns1:sexo xsi:nil='1' xmlns:ns1='Boleto'xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' /%*ns1:dataNascimento xsi:nil='1' xmlns:ns1='Boleto'xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' /%*ns1:estadoCivil xsi:nil='1' xmlns:ns1='Boleto'xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' /%*ns1:identidade xmlns:ns1='Boleto' /%*ns1:pai xmlns:ns1='Boleto' /%*ns1:mae xmlns:ns1='Boleto'%*/ns1:mae%*ns1:endereco xmlns:ns1='Boleto' /%*ns1:numero xmlns:ns1='Boleto'%-1*/ns1:numero%*ns1:complemento xmlns:ns1='Boleto' /%*ns1:bairro xmlns:ns1='Boleto' /%*ns1:cidade xmlns:ns1='Boleto' /%*ns1:uf xmlns:ns1='Boleto' /%*ns1:cep xmlns:ns1='Boleto' /%*ns1:telefone xmlns:ns1='Boleto' /%*ns1:matricula xmlns:ns1='Boleto'%27767740300*/ns1:matricula%*ns1:dataAdmissao xmlns:ns1='Boleto'%2009-10-08-03:00*/ns1:dataAdmissao%*ns1:prazoServidor xmlns:ns1='Boleto'%-1*/ns1:prazoServidor%*ns1:categoria xmlns:ns1='Boleto'%COMISSIONADO*/ns1:categoria%*ns1:estabelecimento xmlns:ns1='Boleto'%SECRETARIA DE ESTADO DE GESTÃO E RECURSOS HUMANOS*/ns1:estabelecimento%*ns1:orgao xmlns:ns1='Boleto'%SECRETARIA DE ESTADO DO GOVERNO*/ns1:orgao%*ns1:estabelecimentoCodigo xmlns:ns1='Boleto'%001*/ns1:estabelecimentoCodigo%*ns1:orgaoCodigo xmlns:ns1='Boleto'%020*/ns1:orgaoCodigo%*ns1:orgaoEndereco xmlns:ns1='Boleto'%PRACA JOAO CLIMACO, S/N*/ns1:orgaoEndereco%*ns1:orgaoNumero xmlns:ns1='Boleto'%-1*/ns1:orgaoNumero%*ns1:orgaoComplemento xmlns:ns1='Boleto'%PALACIOANCHIETA*/ns1:orgaoComplemento%*ns1:orgaoBairro xmlns:ns1='Boleto'%CENTRO*/ns1:orgaoBairro%*ns1:orgaoCidade xmlns:ns1='Boleto'%VITORIA*/ns1:orgaoCidade%*ns1:orgaoUf xmlns:ns1='Boleto'%ES*/ns1:orgaoUf%*ns1:orgaoCep xmlns:ns1='Boleto'%29.015-110*/ns1:orgaoCep%*ns1:orgaoTelefone xmlns:ns1='Boleto'%27 3321-3654*/ns1:orgaoTelefone%*ns1:consignataria xmlns:ns1='Boleto'%CAIXA ECONOMICA FEDERAL*/ns1:consignataria%*ns1:codVerba xmlns:ns1='Boleto'%0647EMPRESTIMO PESSOAL*/ns1:codVerba%*ns1:ranking xmlns:ns1='Boleto'%-1*/ns1:ranking%*ns1:servico xmlns:ns1='Boleto'%EMPRESTIMO PESSOAL*/ns1:servico%*ns1:valorLiberado xmlns:ns1='Boleto'%10000.0*/ns1:valorLiberado%*ns1:dataReserva xmlns:ns1='Boleto'%2016-04-15T13:13:59.000-03:00*/ns1:dataReserva%*ns1:dataInicial xmlns:ns1='Boleto'%2016-05-01-03:00*/ns1:dataInicial%*ns1:dataFinal xmlns:ns1='Boleto'%2017-04-01-03:00*/ns1:dataFinal%*ns1:valorParcela xmlns:ns1='Boleto'%110.0*/ns1:valorParcela%*ns1:adeNumero xmlns:ns1='Boleto'%1615546*/ns1:adeNumero%*ns1:adeIdentificador xmlns:ns1='Boleto'%040003110070390565*/ns1:adeIdentificador%*ns1:indice xsi:nil='1' xmlns:ns1='Boleto'xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' /%*ns1:prazo xmlns:ns1='Boleto'%12*/ns1:prazo%*ns1:pagas xmlns:ns1='Boleto'%0*/ns1:pagas%*ns1:taxaJuros xmlns:ns1='Boleto'%1.46*/ns1:taxaJuros%*ns1:situacao xmlns:ns1='Boleto'%Deferida*/ns1:situacao%*ns1:servicoCodigo xmlns:ns1='Boleto'%046*/ns1:servicoCodigo%*ns1:statusCodigo xmlns:ns1='Boleto'%4*/ns1:statusCodigo%*ns1:consignatariaCodigo xmlns:ns1='Boleto'%149*/ns1:consignatariaCodigo%*ns1:responsavel xmlns:ns1='Boleto'%cef_xml*/ns1:responsavel%*/ns10:boleto%*/ns10:reservarMargemResponse%*/soapenv:Body%*/soapenv:Envelope%"/>
+        <property name="TESTE_MOCK_INCLUIR_CONTRATO_ZETRA" value="false"/>
+        <property name="TESTE_MOCK_CANCELAR_CONTRATO_ZETRA" value="false"/>
+        <property name="TESTE_MOCK_XML_CONSULTA_AVALIACAO_RISCO" value="*?xml version='1.0'?%*consulta_avaliacao_risco:SERVICO_SAIDA%*sibar_base:HEADER%*VERSAO%1.0*/VERSAO%*USUARIO_SERVICO%SFECEMPD*/USUARIO_SERVICO%*USUARIO%C891843*/USUARIO%*OPERACAO%CONSULTAAVALIACAORISCOCREDITO*/OPERACAO%*INDICE%0*/INDICE%*SISTEMA_ORIGEM%SIEMP*/SISTEMA_ORIGEM%*UNIDADE%2*/UNIDADE%*DATA_HORA%20160218*/DATA_HORA%*ID_PROCESSO%CONSULTAAVALIACAORISCOCREDITO*/ID_PROCESSO%*/sibar_base:HEADER%*COD_RETORNO%00*/COD_RETORNO%*ORIGEM_RETORNO%CONSULTA_SIRIC*/ORIGEM_RETORNO%*MSG_RETORNO%*/MSG_RETORNO%*DADOS%*CONSULTA%*AVALIACOES_VALIDAS%*PROPOSTA%00000001*/PROPOSTA%*CODIGO_AVALIACAO%999899999*/CODIGO_AVALIACAO%*TP_PESSOA%1*/TP_PESSOA%*CPF%143606165706*/CPF%*PRODUTO%110*/PRODUTO%*MODALIDADE%0*/MODALIDADE%*DT_INICIO_VALIDADE%01/01/2016*/DT_INICIO_VALIDADE%*DT_FIM_VALIDADE%01/01/2020*/DT_FIM_VALIDADE%*PRAZO%12*/PRAZO%*VR_LIMITE_GLOBAL%100000000.00*/VR_LIMITE_GLOBAL%*VR_LIMITE_CPM%1000000*/VR_LIMITE_CPM%*VR_FINANCIAMENTO%1000000.00*/VR_FINANCIAMENTO%*RATING%A*/RATING%*FLAG_BLOQ_ALCADA%0*/FLAG_BLOQ_ALCADA%*ACAO_VENDA%0*/ACAO_VENDA%*/AVALIACOES_VALIDAS%*AVALIACOES_VALIDAS%*PROPOSTA%00000002*/PROPOSTA%*CODIGO_AVALIACAO%999899999*/CODIGO_AVALIACAO%*TP_PESSOA%1*/TP_PESSOA%*CPF%143606165706*/CPF%*PRODUTO%400000110*/PRODUTO%*MODALIDADE%0*/MODALIDADE%*DT_INICIO_VALIDADE%01012016*/DT_INICIO_VALIDADE%*DT_FIM_VALIDADE%31122016*/DT_FIM_VALIDADE%*PRAZO%48*/PRAZO%*VR_LIMITE_GLOBAL%10000000.00*/VR_LIMITE_GLOBAL%*VR_LIMITE_CPM%1000000*/VR_LIMITE_CPM%*VR_FINANCIAMENTO%1000000.00*/VR_FINANCIAMENTO%*RATING%A*/RATING%*FLAG_BLOQ_ALCADA%0*/FLAG_BLOQ_ALCADA%*ACAO_VENDA%0*/ACAO_VENDA%*/AVALIACOES_VALIDAS%*AVALIACOES_VALIDAS%*PROPOSTA%00000003*/PROPOSTA%*CODIGO_AVALIACAO%999899999*/CODIGO_AVALIACAO%*TP_PESSOA%1*/TP_PESSOA%*CPF%143606165706*/CPF%*PRODUTO%110*/PRODUTO%*MODALIDADE%0*/MODALIDADE%*DT_INICIO_VALIDADE%01012016*/DT_INICIO_VALIDADE%*DT_FIM_VALIDADE%31122016*/DT_FIM_VALIDADE%*PRAZO%60*/PRAZO%*VR_LIMITE_GLOBAL%10000000.00*/VR_LIMITE_GLOBAL%*VR_LIMITE_CPM%1000000*/VR_LIMITE_CPM%*VR_FINANCIAMENTO%1000000.00*/VR_FINANCIAMENTO%*RATING%A*/RATING%*FLAG_BLOQ_ALCADA%0*/FLAG_BLOQ_ALCADA%*ACAO_VENDA%0*/ACAO_VENDA%*/AVALIACOES_VALIDAS%*/CONSULTA%*/DADOS%*/consulta_avaliacao_risco:SERVICO_SAIDA%"/>
+        <property name="MOCK_INCLUIR_BOLETO_SIGCB" value="false"/>
+        <property name="MOCK_CONSULTAR_BOLETO_SIGCB" value="false"/>
+        <property name="SIAPX_KEYCLOAK_PUBLIC_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz4BmVPoQXIcdvwrJDvS5Sflm71G63itfd7+QBA0cg3eJeE0OGXyXfcETKBfzNOWU9JEFr5XmVLW8Iha98Ry1s6FMnMxaWyUyNhGl99VBZDuo9QU6vIg3whzyuEfcSSOqo3qsgWfUE7k4w9pZ9Sxbwgp+6Jq7JmpiOhzVQwe80QE2Kolq40tlsKAEC5/ifKhQT3m03HUNvomYexlStFQds1uZhekslqxwywZa+IodjB+hiuvjEissJVbxVm11wNEc/Va2z3KW3atgau0hbz/Bgp17FTm9pV4KoythCAb5abo6PqeFa06bvoFMu1ZEUq1mOVSpoUS+C+Ec3242D8mSUwIDAQAB"/>
+        <property name="http.proxyHost" value="internet.caixa"/>
+        <property name="http.proxyPort" value="80"/>
+        <property name="https.proxyHost" value="localhost"/>
+        <property name="https.proxyPort" value="8888"/>
+        <property name="http.nonProxyHosts" value="10.195.192.57"/>
+        <property name="javax.net.ssl.keyStore" value="C:/Program Files/Java/jdk1.8.0_261/jre/lib/security/keystore.p12"/>
+        <property name="javax.net.ssl.keyStorePassword" value="qwerasdf"/>
+        <property name="javax.net.ssl.keyStoreType" value="jks"/>
+        <property name="TESTE_MOCK_SIMULACAO_APX" value="true"/>
+        <property name="TESTE_MOCK_CONTRATACAO_APX" value="false"/>
+        <property name="sicdt_home" value="/home/developer/git/evolucao-contratos/evolucao-contratos/sicdt"/>
+        <property name="sicdt_env" value="DEV"/>
+        <property name="sicdt_log_level" value="DEBUG"/>
+        <property name="SICCR_BASE_INTERNO" value="ou=People,o=caixa"/>
+        <property name="SICCR_BASE_EXTERNO" value="ou=People,o=caixa_des"/>
+        <property name="SICCR_URL_LDAP_INTERNO" value="ldap://10.1.12.45:389"/>
+        <property name="SICCR_URL_LDAP_EXTERNO" value="ldap://10.192.228.116:389"/>
+        <property name="TESTE_MOCK_SIMULACAO_BO" value="false"/>
+        <property name="TESTE_MOCK_CONVENENTE" value="false"/>
+        <property name="TESTE_MOCK_CONSULTA_AVALIACAO_RISCO" value="true"/>
+        <property name="TESTE_MOCK_RETORNO_SOLICITA_AVALIACAO_RISCO" value="true"/>
+        <property name="TESTE_MOCK_XML_RETORNO_SOLICITA_AVALIACAO_RISCO" value="false"/>
+        <property name="FEC_URL_LDAP_INTERNO" value="ldap://10.1.12.45:389"/>
+        <property name="FEC_BASE_INTERNO" value="ou=People,o=caixa"/>
+        <property name="SIFES_URL_LDAP_EXTERNO" value="ldap://10.192.228.116:389"/>
+        <property name="SIFES_BASE_EXTERNO" value="ou=People,o=caixa_des"/>
+        <property name="URL_LDAP_EXTERNO" value="ldap://127.0.0.1:389"/>
+        <property name="BASE" value="ou=People,o=caixa_des"/>
+        <property name="INITIAL_CONTEXT_FACTORY" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+        <property name="SIARC_USUARIO" value="SFECARCD"/>
+        <property name="SIARC_PASSWORD" value="SFECARCD"/>
+        <property name="SIEMP_USUARIO" value="SEMPDB01"/>
+        <property name="SIEMP_PASSWORD" value="S208706"/>
+        <property name="SIAPX_USUARIO" value="SFECAPXD"/>
+        <property name="SIAPX_PASSWORD" value="S279741"/>
+        <property name="SIGEC_USUARIO" value="SGECTB01"/>
+        <property name="SIGEC_PASSWORD" value="s322657"/>
+        <property name="SIAPX_WS_MPOG_USUARIO" value="WSCEFS01"/>
+        <property name="SIAPX_WS_MPOG_PASSWORD" value="UB15W3NUCO"/>
+        <property name="SIAPX_WS_MPOG_HOST" value="hom5.siapenet.gov.br"/>
+        <property name="SIAPX_WS_MPOG_PORTA" value="443"/>
+        <property name="SIAPX_WS_MPOG_URL_BASE" value="/wssiapeconsig/consignataria"/>
+        <property name="SIAPX_WS_MPOG_TRUST_STORE_PASS" value="changeit"/>
+        <property name="SIAPX_WS_MPOG_KEY_STORE_PASS" value="changeit"/>
+        <property name="SIAPX_WS_MPOG_TRUST_STORE" value="C:/kit/java/jdk7/lib/security/cacerts"/>
+        <property name="SIAPX_WS_MPOG_PROTOCOLO" value="https"/>
+        <property name="SIAPX_WS_MPOG_COD_CONSIGNATARIA" value="7032"/>
+        <property name="SIAPX_WS_MPOG_COD_CONVENIO" value="703201"/>
+        <property name="javax.net.ssl.trustStore" value="C:\dev\tools\jdk1.8.0_261\jre\lib\security\cacerts"/>
+        <property name="javax.net.ssl.trustStorePassword" value="changeit"/>
+        <property name="javax.net.debug" value="true"/>
+        <property name="SIBAR_FILA_SICLI_CONSULTA_CLIENTE_TIMEOUT" value="1000"/>
+        <property name="SIBAR_FILA_SICLI_CONSULTA_CLIENTE_ENTRADA" value="SIBAR.REQ.CONSULTA_CLIENTE"/>
+        <property name="SIBAR_FILA_SICLI_CONSULTA_CLIENTE_SAIDA" value="SIBAR.RSP.CONSULTA_CLIENTE"/>
+        <property name="SIBAR_FABRICA_SICLI_CONSULTA_CLIENTE" value="SicliQueueConnectionFactory"/>
+        <property name="SIGEC_INTERNO_SISGD_CONTENT_TYPE_PROPOSICOES" value="NO_SIGEC_001"/>
+        <property name="SIGEC_INTERNO_SISGD_NU_SEGTO" value="3321"/>
+        <property name="SIGEC_INTERNO_SISGD_SERVER_NAME" value="GED_DES"/>
+        <property name="SIGEC_INTERNO_SISGD_USER" value="SGECD001"/>
+        <property name="SIGEC_INTERNO_SISGD_PASSWORD" value="At89io34"/>
+        <property name="SIGEC_INTERNO_NOME_SISTEMA" value="SIGEC"/>
+        <property name="SIAPX_WS_DB1_PROTOCOLO" value="https"/>
+        <property name="SIAPX_WS_DB1_HOST" value="www1.consignet.com.br"/>
+        <property name="SIAPX_WS_DB1_PORTA" value="8383"/>
+        <property name="SIAPX_WS_DB1_URL_BASE" value="/DB1ConsignetWebService/services/WSConsignacao"/>
+        <property name="SIAPX_WS_DB1_USUARIO" value="WEBSERVICE_CAIXA@CAIXA"/>
+        <property name="SIAPX_WS_DB1_PASSWORD" value="5FF37DCB5F0B76111BFBCFFDBC128B15"/>
+        <property name="SIAPX_WS_ZETRA_PROTOCOLO" value="https"/>
+        <property name="SIAPX_WS_ZETRA_HOST" value="www.econsig.com.br"/>
+        <property name="SIAPX_WS_ZETRA_URL_BASE" value="/central_homologa/services/HostaHostService/"/>
+        <property name="SIAPX_WS_ZETRA_CLIENTE" value="CEF"/>
+        <property name="SIAPX_WS_ZETRA_USUARIO" value="cef_xml"/>
+        <property name="SIAPX_WS_ZETRA_PASSWORD" value="cef12345"/>
+        <property name="minuta.hostName" value="cxextrux061.desenvolvimento.extracaixa"/>
+        <property name="minuta.channel" value="CHANNEL.SIFEC"/>
+        <property name="minuta.port" value="1414"/>
+        <property name="minuta.queueManager" value="QM_broker01_DES"/>
+        <property name="minuta.destination" value="SIFEC.REQ.GERAR_MINUTA"/>
+        <property name="minuta.username" value="SCNLFECD"/>
+        <property name="minuta.password" value="SCNLFECD"/>
+        <property name="SIFEC_USUARIO" value="SCNLFECD"/>
+        <property name="urlConsultaBoleto" value="http://localhost:8181/fec-web/emprest/consultaBoleto/consulaBoletoRegistrado"/>
+        <property name="URL_CONSULTAR_BOLETO" value="http://10.192.225.5/sibar/ConsultaCobrancaBancaria/Boleto"/>
+        <property name="URL_MANUTENCAO_BOLETO" value="http://10.192.225.5/sibar/ManutencaoCobrancaBancaria/Boleto"/>
+        <property name="URL_SIFEC" value="http://sifec2.des.caixa/"/>
+        <property name="SIECM_GED_URL" value="http://siecm-preteste.des.caixa/siecm-web/"/>
+        <property name="SIECM_GED_LOCAL" value="OS_SIECMTESTE"/>
+        <property name="SIECM_GED_MOCK" value="false"/>
+        <property name="allowConnectingToRunningServer" value="true"/>
+        <property name="bndes.url.base" value="https://ws-h.bndes.gov.br/apa/api/v1/"/>
+        <property name="javax.net.ssl.trustStoreType" value="jks"/>
+        <property name="SIFES_URL_LDAP_INTERNO" value="ldap://127.0.0.1:389"/>
+        <property name="SIFES_BASE_INTERNO" value="ou=People,o=caixa"/>
+        <property name="TESTE_MOCK_RETORNO_MARGEM_CONSIGNADO" value="false"/>
+        <property name="DATAPREV_ECONSIGNADO_URL_BASE" value="http://localhost:8181/ccr-api/credito-consignado"/>
+        <property name="DATAPREV_ECONSIGNADO_TOKEN" value="rvKMzqg"/>
+        <property name="DATAPREV_CERTIFICADO_CAIXA_PATH" value="C:\dev\tools\jboss-eap-6.3.2_siccr\standalone\configuration\tivitKeystore.p12"/>
+        <property name="DATAPREV_CERTIFICADO_CAIXA_SENHA" value="changeit"/>
+        <property name="DATAPREV_MOCK" value="true"/>
+        <property name="DATAPREV_ECONSIGNADO_USER" value="USER"/>
+        <property name="DATAPREV_ECONSIGNADO_PASSWORD" value="PASSWORD"/>
+        <property name="DATAPREV_ECONSIGNADO_KS_64" value="KS_64"/>
+        <property name="DATAPREV_ECONSIGNADO_VERSAO_API" value="v2.2"/>
+        <property name="API_MANAGER_API_KEY" value="l714f9532275eb495c85015a769ab99181"/>
+        <property name="API_MANAGER_URL_BASE" value="https://api.des.caixa:8443"/>
+        <property name="TESTE_MOCK_RETORNO_SIPES" value="false"/>
+        <property name="TESTE_MOCK_RETORNO_SICLI_PF" value="false"/>
+        <property name="TESTE_MOCK_RETORNO_SICLI_PJ" value="false"/>
+        <property name="_________SIMTR________" value="______________"/>
+        <property name="SIMTR_CONFORMIDADE_URLBASE" value="http://simtr-api-intranet-des-esteiras.nprd2.caixa"/>
+        <property name="SIMTR_CONFORMIDADE_PROCESSO_ORIGEM" value="97"/>
+        <property name="SIMTR_CONFORMIDADE_ID_PRODUTO" value="54"/>
+        <property name="SIMTR_CONFORMIDADE_TIPO_RELACIONAMENTO_PESSOA" value="12"/>
+        <property name="_________HUB________" value="______________"/>
+        <property name="SSO_SERVICO_URL_BASE_INTRANET" value="https://login.des.caixa"/>
+        <property name="SICCR_HUB_WS_SERPRO_PROTOCOLO" value="https"/>
+        <property name="SICCR_HUB_WS_SERPRO_HOST" value="hom5.siapenet.gov.br"/>
+        <property name="SICCR_HUB_WS_SERPRO_URL_BASE" value="/wssiapeconsig"/>
+        <property name="SICCR_HUB_WS_SERPRO_CD_CONSIGNATARIA" value="104"/>
+        <property name="SICCR_HUB_WS_SERPRO_CD_PASSWORD_CONSIGNATARIA" value="UB15W3NUCO"/>
+        <property name="SICCR_HUB_WS_DB1_PROTOCOLO" value="https"/>
+        <property name="SICCR_HUB_WS_DB1_HOST" value="www1.consignet.com.br"/>
+        <property name="SICCR_HUB_WS_DB1_PORTA" value="8585"/>
+        <property name="SICCR_HUB_WS_DB1_URL_BASE" value="/DB1ConsignetWebService"/>
+        <property name="SICCR_HUB_WS_DB1_USUARIO" value="TESTE_INTEGRADO@CAIXA"/>
+        <property name="SICCR_HUB_WS_DB1_PASSWORD" value="46e25a8be134eee544fcc68c9ddbf10f"/>
+        <property name="SIFEC_SEED" value="q0kX5uzJwDOfVCphSNbQpgxPi0E22doy"/>
+        <property name="MOCK_AVERBACAO_DATAPREV" value="true"/>
+        <property name="SIGEC_PORTABILIDADE_URLBASE" value="http://sigec.des.caixa/gec-api/por"/>
+        <property name="SIGEC_PORTABILIDADE_URLBASE_2" value="http://sigecpor2.des.caixa/gec-api/por"/>
+        <property name="SSO_INTRANET_REALM_NAME" value="intranet"/>
+        <property name="SSO_INTRANET_AUTH_URL" value="https://login.des.caixa/auth"/>
+        <property name="SSO_INTRANET_RESOURCE_NAME" value="cli-web-fec"/>
+        <property name="SSO_INTRANET_SECRET" value="36ab01d0-f1a5-4b1b-9a76-839553c7a6a9"/>
+        <property name="SSO_INTRANET_TYPE_OF_SSL_REQUIRED" value="external"/>
+        <property name="SSO_INTRANET_BEARER_ONLY" value="false"/>
+        <property name="SSO_INTRANET_PUBLIC_CLIENT" value="false"/>
+        <property name="SSO_INTERNET_REALM_NAME" value="internet"/>
+        <property name="SSO_INTERNET_AUTH_URL" value="https://logindes.caixa.gov.br/auth"/>
+        <property name="SSO_INTERNET_RESOURCE_NAME" value="cli-web-fec"/>
+        <property name="SSO_INTERNET_SECRET" value="de0ddc53-641c-4c38-bb48-0912d9d8227f"/>
+        <property name="SSO_INTERNET_TYPE_OF_SSL_REQUIRED" value="external"/>
+        <property name="SSO_INTERNET_BEARER_ONLY" value="false"/>
+        <property name="SSO_INTERNET_PUBLIC_CLIENT" value="false"/>
+    </system-properties>
+
+
+    <management>
+        <security-realms>
+            <security-realm name="ManagementRealm">
+                <authentication>
+                    <local default-user="$local"/>
+                    <properties path="mgmt-users.properties" relative-to="jboss.server.config.dir"/>
+                </authentication>
+            </security-realm>
+            <security-realm name="ApplicationRealm">
+                <authentication>
+                    <local default-user="$local" allowed-users="*"/>
+                    <properties path="application-users.properties" relative-to="jboss.server.config.dir"/>
+                </authentication>
+                <authorization>
+                    <properties path="application-roles.properties" relative-to="jboss.server.config.dir"/>
+                </authorization>
+            </security-realm>
+        </security-realms>
+        <management-interfaces>
+            <native-interface security-realm="ManagementRealm">
+                <socket-binding native="management-native"/>
+            </native-interface>
+            <http-interface security-realm="ManagementRealm">
+                <socket-binding http="management-http"/>
+            </http-interface>
+        </management-interfaces>
+    </management>
+
+    <profile>
+        <subsystem xmlns="urn:jboss:domain:logging:1.4">
+            <console-handler name="CONSOLE">
+                <level name="FINE"/>
+                <formatter>
+                    <pattern-formatter pattern="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+                </formatter>
+            </console-handler>
+            <periodic-rotating-file-handler name="FILE" autoflush="true">
+                <level name="FINE"/>
+                <formatter>
+                    <pattern-formatter pattern="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+                </formatter>
+                <file relative-to="jboss.server.log.dir" path="server.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <periodic-rotating-file-handler name="SIAPX" autoflush="true">
+                <level name="FINE"/>
+                <formatter>
+                    <pattern-formatter pattern="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+                </formatter>
+                <file relative-to="jboss.server.log.dir" path="siapx.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <periodic-rotating-file-handler name="SIFEC" autoflush="true">
+                <level name="FINE"/>
+                <file relative-to="jboss.server.log.dir" path="sifec.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <periodic-rotating-file-handler name="SICLI" autoflush="true">
+                <level name="FINE"/>
+                <file relative-to="jboss.server.log.dir" path="sicli.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <periodic-rotating-file-handler name="HUB" autoflush="true">
+                <level name="FINE"/>
+                <file relative-to="jboss.server.log.dir" path="hub.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <periodic-rotating-file-handler name="SECURITY" autoflush="true">
+                <level name="TRACE"/>
+                <file relative-to="jboss.server.log.dir" path="security.log"/>
+                <suffix value=".yyyy-MM-dd"/>
+                <append value="true"/>
+            </periodic-rotating-file-handler>
+            <logger category="com.arjuna">
+                <level name="WARN"/>
+            </logger>
+            <logger category="org.apache.tomcat.util.modeler">
+                <level name="WARN"/>
+            </logger>
+            <logger category="org.jboss.as.config" use-parent-handlers="true">
+                <level name="DEBUG"/>
+            </logger>
+            <logger category="sun.rmi">
+                <level name="WARN"/>
+            </logger>
+            <logger category="jacorb">
+                <level name="WARN"/>
+            </logger>
+            <logger category="jacorb.config">
+                <level name="ERROR"/>
+            </logger>
+            <logger category="br.gov.caixa.siccr.hub">
+                <level name="FINE"/>
+                <handlers>
+                    <handler name="CONSOLE"/>
+                    <handler name="FILE"/>
+                    <handler name="HUB"/>
+                </handlers>
+            </logger>
+            <logger category="br.gov.caixa.apx" use-parent-handlers="false">
+                <level name="FINE"/>
+                <handlers>
+                    <handler name="SIAPX"/>
+                </handlers>
+            </logger>
+            <logger category="br.gov.caixa.reuso.sicli" use-parent-handlers="false">
+                <level name="FINE"/>
+                <handlers>
+                    <handler name="SICLI"/>
+                </handlers>
+            </logger>
+            <logger category="br.gov.caixa" use-parent-handlers="false">
+                <level name="FINE"/>
+                <handlers>
+                    <handler name="SIFEC"/>
+                </handlers>
+            </logger>
+            <logger category="org.jboss.security" use-parent-handlers="false">
+                <level name="TRACE"/>
+            </logger>
+            <logger category="br.gov.caixa.arqrefservices" use-parent-handlers="true">
+                <level name="FINE"/>
+                <handlers>
+                    <handler name="SIFEC"/>
+                </handlers>
+            </logger>
+            <root-logger>
+                <level name="INFO"/>
+                <handlers>
+                    <handler name="CONSOLE"/>
+                    <handler name="FILE"/>
+                </handlers>
+            </root-logger>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:cmp:1.1"/>
+        <subsystem xmlns="urn:jboss:domain:datasources:1.2">
+            <datasources>
+                <datasource jndi-name="java:/jdbc/OracleSicdtDS" pool-name="jdbc/OracleSicdtDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:oracle:thin:@10.4.36.58:2967:xe</connection-url>
+                    <driver>oracle</driver>
+                    <security>
+                        <user-name>CDT</user-name>
+                        <password>CDT</password>
+                    </security>
+                </datasource>
+                <datasource jta="true" jndi-name="java:/jdbc/OracleSiccrDS_" pool-name="jdbc/OracleSiccrDS_" enabled="true" use-java-context="true" use-ccm="false">
+                    <connection-url>jdbc:oracle:thin:@localhost:1521:xe</connection-url>
+                    <driver>oracle</driver>
+                    <pool>
+                        <min-pool-size>1</min-pool-size>
+                        <max-pool-size>10</max-pool-size>
+                        <flush-strategy>IdleConnections</flush-strategy>
+                    </pool>
+                    <security>
+                        <user-name>CCR</user-name>
+                        <password>CCR</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/OracleSiccrDS" pool-name="jdbc/OracleSiccrDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:oracle:thin:@//cnpexdadvm01clu04.extra.caixa.gov.br:1521/orad01ng</connection-url>
+                    <driver>oracle</driver>
+                    <security>
+                        <user-name>F596584</user-name>
+                        <password>F596584$</password>
+                    </security>
+                    <validation>
+                        <check-valid-connection-sql>select 1 from dual</check-valid-connection-sql>
+                        <validate-on-match>true</validate-on-match>
+                        <background-validation>false</background-validation>
+                    </validation>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/jdbc/DB2SiccrDS" pool-name="jdbc/DB2SiccrDS" enabled="true" use-ccm="false">
+                    <connection-url>jdbc:db2://10.1.14.11:5021/CSD1</connection-url>
+                    <driver-class>com.ibm.db2.jcc.DB2Driver</driver-class>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SCCRDB01</user-name>
+                        <password>S311571</password>
+                    </security>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/jdbc/DB2SiempDS" pool-name="jdbc/DB2SiempDS" enabled="true" use-ccm="false">
+                    <connection-url>jdbc:db2://10.1.14.11:5021/CSD1</connection-url>
+                    <driver-class>com.ibm.db2.jcc.DB2Driver</driver-class>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SEMPDB01</user-name>
+                        <password>S208706</password>
+                    </security>
+                </datasource>
+                <datasource jta="false" jndi-name="java:/jdbc/DB2SifecDS2" pool-name="jdbc/DB2SifecDS2" enabled="true" use-ccm="false">
+                    <connection-url>jdbc:db2://10.1.11.5021/CSD1</connection-url>
+                    <driver-class>com.ibm.db2.jcc.DB2Driver</driver-class>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SFECDB01</user-name>
+                        <password>SFECDB01</password>
+                    </security>
+                    <validation>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>false</background-validation>
+                    </validation>
+                    <timeout>
+                        <set-tx-query-timeout>false</set-tx-query-timeout>
+                        <blocking-timeout-millis>0</blocking-timeout-millis>
+                        <idle-timeout-minutes>0</idle-timeout-minutes>
+                        <query-timeout>0</query-timeout>
+                        <use-try-lock>0</use-try-lock>
+                        <allocation-retry>0</allocation-retry>
+                        <allocation-retry-wait-millis>0</allocation-retry-wait-millis>
+                    </timeout>
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/SybaseSiempDS" pool-name="jdbc/SybaseSiempDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:sybase:Tds:cxextrux047.desenvolvimento.extracaixa:55000/RICDB001?SERVER_INITIATED_TRANSACTIONS=false</connection-url>
+                    <driver>sybase1</driver>
+                    <pool>
+                        <min-pool-size>5</min-pool-size>
+                        <max-pool-size>10</max-pool-size>
+                    </pool>
+                    <security>
+                        <user-name>siric_des</user-name>
+                        <password>warp11</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.sybase.SybaseValidConnectionChecker"/>
+                        <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+                    </validation>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/OracleSifesDS" pool-name="jdbc/OracleSifesDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:oracle:thin:@bdbr07.caixa:1521:orades01</connection-url>
+                    <driver>oracle</driver>
+                    <security>
+                        <user-name>S999006</user-name>
+                        <password>CAIXA57</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/OracleSiganDS" pool-name="jdbc/OracleSiganDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:oracle:thin:@bdbr07.caixa:1521:orades01</connection-url>
+                    <driver>oracle</driver>
+                    <security>
+                        <user-name>s999029</user-name>
+                        <password>s999029</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/SybaseSiganDS" pool-name="jdbc/SybaseSiganDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:sybase:Tds:bdbr12.caixa:55000/RICDB001?SERVER_INITIATED_TRANSACTIONS=false</connection-url>
+                    <driver>sybase1</driver>
+                    <security>
+                        <user-name>sgan001</user-name>
+                        <password>pwgan01</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/SybaseSiricDS" pool-name="jdbc/SybaseSiricDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:sybase:Tds:bdbr12.caixa:55000/RICDB001?SERVER_INITIATED_TRANSACTIONS=false</connection-url>
+                    <driver>sybase1</driver>
+                    <security>
+                        <user-name>siric_des</user-name>
+                        <password>warp11</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/DB2SiarcDS" pool-name="jdbc/DB2SiarcDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:db2://10.1.14.11:5021/CSD1</connection-url>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SRVARCD1</user-name>
+                        <password>SRVARCD1</password>
+                    </security>
+                </datasource>
+                <datasource jndi-name="java:/jdbc/DB2SigecDS" pool-name="jdbc/DB2SigecDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:db2://10.1.14.11:5023/CSD2</connection-url>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SGECTB01</user-name>
+                        <password>s322657</password>
+                    </security>
+                    <timeout>
+                        <set-tx-query-timeout>true</set-tx-query-timeout>
+                        <blocking-timeout-millis>10000</blocking-timeout-millis>
+                        <query-timeout>10000</query-timeout>
+                        <use-try-lock>1</use-try-lock>
+                        <allocation-retry>1</allocation-retry>
+                        <allocation-retry-wait-millis>10000</allocation-retry-wait-millis>
+                    </timeout>
+                </datasource>
+                <datasource jta="true" jndi-name="java:/jdbc/OracleSiptoDS" pool-name="jdbc/OracleSiptoDS" enabled="true" use-ccm="false">
+                    <connection-url>jdbc:oracle:thin:@localhost:1521:xe</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>oracle</driver>
+                    <pool>
+                        <min-pool-size>1</min-pool-size>
+                        <max-pool-size>10</max-pool-size>
+                    </pool>
+                    <security>
+                        <user-name>SIPTO</user-name>
+                        <password>sipto</password>
+                    </security>
+                    <validation>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>false</background-validation>
+                    </validation>
+                    <timeout>
+                        <set-tx-query-timeout>false</set-tx-query-timeout>
+                        <blocking-timeout-millis>0</blocking-timeout-millis>
+                        <idle-timeout-minutes>0</idle-timeout-minutes>
+                        <query-timeout>0</query-timeout>
+                        <use-try-lock>0</use-try-lock>
+                        <allocation-retry>0</allocation-retry>
+                        <allocation-retry-wait-millis>0</allocation-retry-wait-millis>
+                    </timeout>
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <datasource jta="true" jndi-name="java:/jdbc/OracleSirurDS" pool-name="jdbc/OracleSirurDS" enabled="true" use-ccm="false">
+                    <connection-url>jdbc:oracle:thin:@localhost:1521:xe</connection-url>
+                    <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    <driver>oracle</driver>
+                    <pool>
+                        <min-pool-size>1</min-pool-size>
+                        <max-pool-size>10</max-pool-size>
+                    </pool>
+                    <security>
+                        <user-name>RUR</user-name>
+                        <password>RUR</password>
+                    </security>
+                    <validation>
+                        <validate-on-match>false</validate-on-match>
+                        <background-validation>false</background-validation>
+                    </validation>
+                    <timeout>
+                        <set-tx-query-timeout>false</set-tx-query-timeout>
+                        <blocking-timeout-millis>0</blocking-timeout-millis>
+                        <idle-timeout-minutes>0</idle-timeout-minutes>
+                        <query-timeout>0</query-timeout>
+                        <use-try-lock>0</use-try-lock>
+                        <allocation-retry>0</allocation-retry>
+                        <allocation-retry-wait-millis>0</allocation-retry-wait-millis>
+                    </timeout>
+                    <statement>
+                        <share-prepared-statements>false</share-prepared-statements>
+                    </statement>
+                </datasource>
+                <xa-datasource jndi-name="java:/jdbc/DB2SifecDS" pool-name="jdbc/DB2SifecDS" enabled="true" use-ccm="false">
+                    <xa-datasource-property name="ServerName">
+                        10.1.14.11
+                    </xa-datasource-property>
+                    <xa-datasource-property name="PortNumber">
+                        5021
+                    </xa-datasource-property>
+                    <xa-datasource-property name="DatabaseName">
+                        CSD1
+                    </xa-datasource-property>
+                    <xa-datasource-property name="DriverType">
+                        4
+                    </xa-datasource-property>
+                    <xa-datasource-class>com.ibm.db2.jcc.DB2XADataSource</xa-datasource-class>
+                    <driver>db2</driver>
+                    <security>
+                        <user-name>SFECDB01</user-name>
+                        <password>SFECDB01</password>
+                    </security>
+                    <timeout>
+                        <set-tx-query-timeout>true</set-tx-query-timeout>
+                        <blocking-timeout-millis>10000</blocking-timeout-millis>
+                        <query-timeout>10000</query-timeout>
+                        <use-try-lock>1</use-try-lock>
+                        <allocation-retry>1</allocation-retry>
+                        <allocation-retry-wait-millis>10000</allocation-retry-wait-millis>
+                        <xa-resource-timeout>10000</xa-resource-timeout>
+                    </timeout>
+                </xa-datasource>
+                <drivers>
+                    <driver name="h2" module="com.h2database.h2">
+                        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+                    </driver>
+                    <driver name="oracle" module="oracle">
+                        <driver-class>oracle.jdbc.OracleDriver</driver-class>
+                    </driver>
+                    <driver name="db2" module="db2">
+                        <driver-class>com.ibm.db2.jcc.DB2Driver</driver-class>
+                        <xa-datasource-class>com.ibm.db2.jcc.DB2XADataSource</xa-datasource-class>
+                    </driver>
+                    <driver name="sybase1" module="sybase"/>
+                </drivers>
+            </datasources>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
+            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:ee:1.2">
+            <spec-descriptor-property-replacement>true</spec-descriptor-property-replacement>
+            <jboss-descriptor-property-replacement>true</jboss-descriptor-property-replacement>
+            <annotation-property-replacement>true</annotation-property-replacement>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:ejb3:1.4">
+            <session-bean>
+                <stateless>
+                    <bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
+                </stateless>
+                <stateful default-access-timeout="5000" cache-ref="simple" clustered-cache-ref="clustered"/>
+                <singleton default-access-timeout="5000"/>
+            </session-bean>
+            <mdb>
+                <resource-adapter-ref resource-adapter-name="wmq.jmsra.rar"/>
+                <bean-instance-pool-ref pool-name="mdb-strict-max-pool"/>
+            </mdb>
+            <pools>
+                <bean-instance-pools>
+                    <strict-max-pool name="slsb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
+                    <strict-max-pool name="mdb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
+                </bean-instance-pools>
+            </pools>
+            <caches>
+                <cache name="simple" aliases="NoPassivationCache"/>
+                <cache name="passivating" passivation-store-ref="file" aliases="SimpleStatefulCache"/>
+                <cache name="clustered" passivation-store-ref="infinispan" aliases="StatefulTreeCache"/>
+            </caches>
+            <passivation-stores>
+                <file-passivation-store name="file"/>
+                <cluster-passivation-store name="infinispan" cache-container="ejb"/>
+            </passivation-stores>
+            <async thread-pool-name="default"/>
+            <timer-service thread-pool-name="default">
+                <data-store path="timer-service-data" relative-to="jboss.server.data.dir"/>
+            </timer-service>
+            <remote connector-ref="remoting-connector" thread-pool-name="default"/>
+            <thread-pools>
+                <thread-pool name="default">
+                    <max-threads count="10"/>
+                    <keepalive-time time="100" unit="milliseconds"/>
+                </thread-pool>
+            </thread-pools>
+            <iiop enable-by-default="false" use-qualified-name="false"/>
+            <default-missing-method-permissions-deny-access value="false"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:infinispan:1.5">
+            <cache-container name="singleton" aliases="cluster ha-partition" default-cache="default" statistics-enabled="true">
+                <transport lock-timeout="60000"/>
+                <replicated-cache name="default" mode="SYNC" batching="true" statistics-enabled="true">
+                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+            </cache-container>
+            <cache-container name="web" aliases="standard-session-cache" default-cache="repl" module="org.jboss.as.clustering.web.infinispan" statistics-enabled="true">
+                <transport lock-timeout="60000"/>
+                <replicated-cache name="repl" mode="ASYNC" batching="true" statistics-enabled="true">
+                    <file-store/>
+                </replicated-cache>
+                <replicated-cache name="sso" mode="SYNC" batching="true" statistics-enabled="true"/>
+                <distributed-cache name="dist" l1-lifespan="0" mode="ASYNC" batching="true" statistics-enabled="true">
+                    <file-store/>
+                </distributed-cache>
+            </cache-container>
+            <cache-container name="ejb" aliases="sfsb sfsb-cache" default-cache="repl" module="org.jboss.as.clustering.ejb3.infinispan" statistics-enabled="true">
+                <transport lock-timeout="60000"/>
+                <replicated-cache name="repl" mode="ASYNC" batching="true" statistics-enabled="true">
+                    <eviction strategy="LRU" max-entries="10000"/>
+                    <file-store/>
+                </replicated-cache>
+                <replicated-cache name="remote-connector-client-mappings" mode="SYNC" batching="true" statistics-enabled="true"/>
+                <distributed-cache name="dist" l1-lifespan="0" mode="ASYNC" batching="true" statistics-enabled="true">
+                    <eviction strategy="LRU" max-entries="10000"/>
+                    <file-store/>
+                </distributed-cache>
+            </cache-container>
+            <cache-container name="hibernate" default-cache="local-query" module="org.jboss.as.jpa.hibernate:4" statistics-enabled="true">
+                <transport lock-timeout="60000"/>
+                <local-cache name="local-query" statistics-enabled="true">
+                    <transaction mode="NONE"/>
+                    <eviction strategy="LRU" max-entries="10000"/>
+                    <expiration max-idle="100000"/>
+                </local-cache>
+                <invalidation-cache name="entity" mode="SYNC" statistics-enabled="true">
+                    <transaction mode="NON_XA"/>
+                    <eviction strategy="LRU" max-entries="10000"/>
+                    <expiration max-idle="100000"/>
+                </invalidation-cache>
+                <replicated-cache name="timestamps" mode="ASYNC" statistics-enabled="true">
+                    <transaction mode="NONE"/>
+                    <eviction strategy="NONE"/>
+                </replicated-cache>
+            </cache-container>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jacorb:1.4">
+            <orb socket-binding="jacorb" ssl-socket-binding="jacorb-ssl">
+                <initializers security="identity" transactions="spec"/>
+            </orb>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jaxr:1.1">
+            <connection-factory jndi-name="java:jboss/jaxr/ConnectionFactory"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:jca:1.1">
+            <archive-validation enabled="true" fail-on-error="true" fail-on-warn="false"/>
+            <bean-validation enabled="true"/>
+            <default-workmanager>
+                <short-running-threads>
+                    <core-threads count="50"/>
+                    <queue-length count="50"/>
+                    <max-threads count="50"/>
+                    <keepalive-time time="10" unit="seconds"/>
+                </short-running-threads>
+                <long-running-threads>
+                    <core-threads count="50"/>
+                    <queue-length count="50"/>
+                    <max-threads count="50"/>
+                    <keepalive-time time="10" unit="seconds"/>
+                </long-running-threads>
+            </default-workmanager>
+            <cached-connection-manager/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jdr:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:jgroups:1.1" default-stack="udp">
+            <stack name="udp">
+                <transport type="UDP" shared="false" socket-binding="jgroups-udp"/>
+                <protocol type="PING"/>
+                <protocol type="MERGE3"/>
+                <protocol type="FD_SOCK" socket-binding="jgroups-udp-fd"/>
+                <protocol type="FD"/>
+                <protocol type="VERIFY_SUSPECT"/>
+                <protocol type="pbcast.NAKACK"/>
+                <protocol type="UNICAST2"/>
+                <protocol type="pbcast.STABLE"/>
+                <protocol type="pbcast.GMS"/>
+                <protocol type="UFC"/>
+                <protocol type="MFC"/>
+                <protocol type="FRAG2"/>
+                <protocol type="RSVP"/>
+            </stack>
+            <stack name="tcp">
+                <transport type="TCP" socket-binding="jgroups-tcp"/>
+                <protocol type="MPING" socket-binding="jgroups-mping"/>
+                <protocol type="MERGE2"/>
+                <protocol type="FD_SOCK" socket-binding="jgroups-tcp-fd"/>
+                <protocol type="FD"/>
+                <protocol type="VERIFY_SUSPECT"/>
+                <protocol type="pbcast.NAKACK"/>
+                <protocol type="UNICAST2"/>
+                <protocol type="pbcast.STABLE"/>
+                <protocol type="pbcast.GMS"/>
+                <protocol type="UFC"/>
+                <protocol type="MFC"/>
+                <protocol type="FRAG2"/>
+                <protocol type="RSVP"/>
+            </stack>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jmx:1.3">
+            <expose-resolved-model/>
+            <expose-expression-model/>
+            <remoting-connector/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jpa:1.1">
+            <jpa default-datasource="" default-extended-persistence-inheritance="DEEP"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:jsf:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:jsr77:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:mail:1.1">
+            <mail-session jndi-name="java:jboss/mail/Default">
+                <smtp-server outbound-socket-binding-ref="mail-smtp"/>
+            </mail-session>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:messaging:1.4"/>
+        <subsystem xmlns="urn:jboss:domain:modcluster:1.2">
+            <mod-cluster-config advertise-socket="modcluster" advertise="false" connector="ajp">
+                <dynamic-load-provider>
+                    <load-metric type="busyness"/>
+                </dynamic-load-provider>
+            </mod-cluster-config>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:naming:1.4">
+            <remote-naming/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:pojo:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:remoting:1.1">
+            <connector name="remoting-connector" socket-binding="remoting" security-realm="ApplicationRealm"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:resource-adapters:1.1">
+            <resource-adapters>
+                <resource-adapter id="wmq.jmsra.rar">
+                    <archive>
+                        wmq.jmsra.rar
+                    </archive>
+                    <transaction-support>NoTransaction</transaction-support>
+                    <connection-definitions>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SipesConnectionFactory" enabled="true" pool-name="java:/jms/SipesConnectionFactory">
+                            <config-property name="channel">
+                                SIFEC.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.1.14.41
+                            </config-property>
+                            <config-property name="password">
+                                SCNLFECD
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD3
+                            </config-property>
+                            <config-property name="port">
+                                1415
+                            </config-property>
+                            <config-property name="username">
+                                SCNLFECD
+                            </config-property>
+                            <security>
+                                <application/>
+                            </security>
+                            <validation>
+                                <background-validation>false</background-validation>
+                            </validation>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedQueueConnectionFactoryImpl" jndi-name="java:/jms/SicliConnectionFactory2" enabled="true" pool-name="java:/jms/SicliConnectionFactory2">
+                            <config-property name="channel">
+                                SYSTEM.DEF.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.192.228.145
+                            </config-property>
+                            <config-property name="password">
+                                undefined
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD1
+                            </config-property>
+                            <config-property name="port">
+                                1414
+                            </config-property>
+                            <config-property name="username">
+                                SCLIBD01
+                            </config-property>
+                            <security>
+                                <application/>
+                            </security>
+                            <validation>
+                                <background-validation>false</background-validation>
+                            </validation>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SicliConnectionFactory" pool-name="SicliConnectionFactory">
+                            <config-property name="channel">
+                                SIFEC.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.1.14.41
+                            </config-property>
+                            <config-property name="password">
+                                SCNLFECD
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD3
+                            </config-property>
+                            <config-property name="port">
+                                1415
+                            </config-property>
+                            <config-property name="username">
+                                SCNLFECD
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/MinutaConnectionFactory" pool-name="MinutaConnectionFactory">
+                            <config-property name="channel">
+                                CHANNEL.SIFEC
+                            </config-property>
+                            <config-property name="hostName">
+                                10.192.224.94
+                            </config-property>
+                            <config-property name="password">
+                                SCNLFECD
+                            </config-property>
+                            <config-property name="queueManager">
+                                QM_broker01_DES
+                            </config-property>
+                            <config-property name="port">
+                                1414
+                            </config-property>
+                            <config-property name="username">
+                                SCNLFECD
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiricConnectionFactory" pool-name="SiricConnectionFactory">
+                            <config-property name="channel">
+                                SIFEC.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.1.14.41
+                            </config-property>
+                            <config-property name="password">
+                                SCNLFECD
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD3
+                            </config-property>
+                            <config-property name="port">
+                                1415
+                            </config-property>
+                            <config-property name="username">
+                                SCNLFECD
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiempConnectionFactory_PRD" pool-name="SiempConnectionFactory_PRD">
+                            <config-property name="channel">
+                                SIEMP.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.252.176.47
+                            </config-property>
+                            <config-property name="password">
+                                SFECEMPP
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRPC
+                            </config-property>
+                            <config-property name="port">
+                                1418
+                            </config-property>
+                            <config-property name="username">
+                                SFECEMPP
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedQueueConnectionFactoryImpl" jndi-name="java:/jms/SicliQueueConnectionFactory" pool-name="SicliQueueConnectionFactory">
+                            <config-property name="channel">
+                                SIEMP.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                brd5brk.desenvolvimento.extracaixa
+                            </config-property>
+                            <config-property name="password">
+                                SFECEMPD
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD5
+                            </config-property>
+                            <config-property name="port">
+                                1418
+                            </config-property>
+                            <config-property name="username">
+                                SFECEMPD
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiarcConnectionFactory" pool-name="SiarcConnectionFactory">
+                            <config-property name="hostName">
+                                10.192.228.145
+                            </config-property>
+                            <config-property name="password">
+                                SRVARCD1
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD1
+                            </config-property>
+                            <config-property name="port">
+                                1414
+                            </config-property>
+                            <config-property name="channel">
+                                BRSUN033.TO.BRD1
+                            </config-property>
+                            <config-property name="transportType">
+                                CLIENT
+                            </config-property>
+                            <config-property name="username">
+                                SRVARCD1
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiapxConnectionFactory" enabled="true" pool-name="java:/jms/SiapxConnectionFactory">
+                            <config-property name="channel">
+                                SIFEC.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.252.176.47
+                            </config-property>
+                            <config-property name="password">
+                                undefined
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD5
+                            </config-property>
+                            <config-property name="port">
+                                1418
+                            </config-property>
+                            <config-property name="username">
+                                SCNLAPXD
+                            </config-property>
+                            <validation>
+                                <background-validation>false</background-validation>
+                            </validation>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiempConnectionFactory" pool-name="SiempConnectionFactory">
+                            <config-property name="channel">
+                                SIEMP.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                brd5brk.desenvolvimento.extracaixa
+                            </config-property>
+                            <config-property name="password">
+                                SFECEMPD
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD5
+                            </config-property>
+                            <config-property name="port">
+                                1418
+                            </config-property>
+                            <config-property name="username">
+                                SFECEMPD
+                            </config-property>
+                        </connection-definition>
+                        <connection-definition class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl" jndi-name="java:/jms/SiapxConnectionFactoryFCE" enabled="true" pool-name="java:/jms/SiapxConnectionFactoryFCE">
+                            <config-property name="channel">
+                                SIFEC.SVRCONN
+                            </config-property>
+                            <config-property name="hostName">
+                                10.1.14.41
+                            </config-property>
+                            <config-property name="password">
+                                undefined
+                            </config-property>
+                            <config-property name="queueManager">
+                                BRD3
+                            </config-property>
+                            <config-property name="port">
+                                1415
+                            </config-property>
+                            <config-property name="username">
+                                SCNLFECD
+                            </config-property>
+                            <validation>
+                                <background-validation>false</background-validation>
+                            </validation>
+                        </connection-definition>
+                    </connection-definitions>
+                    <admin-objects>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.CONSULTA_CLIENTE" pool-name="SIBAR.REQ.CONSULTA_CLIENTE">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.CONSULTA_CLIENTE
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/LQ.RSP.SICLI_SIPLAN" enabled="true" use-java-context="false" pool-name="java:/jms/LQ.RSP.SICLI_SIPLAN">
+                            <config-property name="baseQueueName">
+                                LQ.RSP.SICLI_SIPLAN
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.REQ.PORTAL" pool-name="java:/jms/SIFEC.REQ.PORTAL">
+                            <config-property name="baseQueueName">
+                                SIFEC.REQ.PORTAL
+                            </config-property>
+                            <config-property name="CCSID">
+                                1208
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.RELATORIO_AVALIACAO_RISCO" pool-name="SIBAR.REQ.RELATORIO_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.RELATORIO_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.PESQUISA_CADASTRAL" pool-name="SIBAR.REQ.PESQUISA_CADASTRAL">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.PESQUISA_CADASTRAL
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.CANCELAMENTO_AVALIACAO_RISCO" pool-name="SIBAR.REQ.CANCELAMENTO_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.CANCELAMENTO_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.REQ.RECUPERAR_DADOS_MINUTA" pool-name="SIFEC.REQ.RECUPERAR_DADOS_MINUTA">
+                            <config-property name="baseQueueName">
+                                SIFEC.REQ.RECUPERAR_DADOS_MINUTA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.CONSULTA_AVALIACAO_RISCO" pool-name="SIBAR.REQ.CONSULTA_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.CONSULTA_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIAPX.RSP.CONSIGNACAO" enabled="true" use-java-context="false" pool-name="java:/jms/SIAPX.RSP.CONSIGNACAO">
+                            <config-property name="baseQueueName">
+                                SIAPX.RSP.CONSIGNACAO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.DESBLOQUEIO_ALCADA" pool-name="SIBAR.REQ.DESBLOQUEIO_ALCADA">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.DESBLOQUEIO_ALCADA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.CONSULTA_CLIENTE" pool-name="SIBAR.RSP.CONSULTA_CLIENTE">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.CONSULTA_CLIENTE
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.RSP.GERAR_MINUTA" pool-name="SIFEC.RSP.GERAR_MINUTA">
+                            <config-property name="baseQueueName">
+                                SIFEC.RSP.GERAR_MINUTA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.RSP.RECUPERAR_DADOS_MINUTA" pool-name="SIFEC.RSP.RECUPERAR_DADOS_MINUTA">
+                            <config-property name="baseQueueName">
+                                SIFEC.RSP.RECUPERAR_DADOS_MINUTA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.DESBLOQUEIO_ALCADA" pool-name="SIBAR.RSP.DESBLOQUEIO_ALCADA">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.DESBLOQUEIO_ALCADA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.MANUTENCAO_CLIENTE" pool-name="SIBAR.RSP.MANUTENCAO_CLIENTE">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.MANUTENCAO_CLIENTE
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIAPX.REQ.CONSIGNACAO" enabled="true" use-java-context="false" pool-name="java:/jms/SIAPX.REQ.CONSIGNACAO">
+                            <config-property name="baseQueueName">
+                                LQ.RSP.SIARC.BACEN_PESQUISA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SICCR.RSP.AVALIACAO_RISCO_CREDITO" enabled="true" use-java-context="false" pool-name="SICCR.RSP.AVALIACAO_RISCO_CREDITO">
+                            <config-property name="baseQueueName">
+                                SICCR.RSP.AVALIACAO_RISCO_CREDITO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.PESQUISA_CADASTRAL" pool-name="SIBAR.RSP.PESQUISA_CADASTRAL">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.PESQUISA_CADASTRAL
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.REQ.GERAR_MINUTA" pool-name="SIFEC.REQ.GERAR_MINUTA">
+                            <config-property name="baseQueueName">
+                                SIFEC.REQ.GERAR_MINUTA
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.CANCELAMENTO_AVALIACAO_RISCO" pool-name="SIBAR.RSP.CANCELAMENTO_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.CANCELAMENTO_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.MANUTENCAO_CLIENTE" pool-name="SIBAR.REQ.MANUTENCAO_CLIENTE">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.MANUTENCAO_CLIENTE
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIFEC.RSP.PORTAL" pool-name="java:/jms/SIFEC.RSP.PORTAL">
+                            <config-property name="baseQueueName">
+                                SIFEC.RSP.PORTAL
+                            </config-property>
+                            <config-property name="CCSID">
+                                1208
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/LQ.REQ.SICLI_SIPLAN" enabled="true" use-java-context="false" pool-name="java:/jms/LQ.REQ.SICLI_SIPLAN">
+                            <config-property name="baseQueueName">
+                                LQ.REQ.SICLI_SIPLAN
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIAPX.RSP.AVALIACAO_RISCO_CREDITO" enabled="true" use-java-context="false" pool-name="SIAPX.RSP.AVALIACAO_RISCO_CREDITO">
+                            <config-property name="baseQueueName">
+                                SIAPX.RSP.AVALIACAO_RISCO_CREDITO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIEMP.RSP.AVALIACAO_RISCO_CREDITO" pool-name="SIEMP.RSP.AVALIACAO_RISCO_CREDITO">
+                            <config-property name="baseQueueName">
+                                SIEMP.RSP.AVALIACAO_RISCO_CREDITO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.REQ.AVALIACAO_RISCO_CREDITO" pool-name="SIBAR.REQ.AVALIACAO_RISCO_CREDITO">
+                            <config-property name="baseQueueName">
+                                SIBAR.REQ.AVALIACAO_RISCO_CREDITO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.RELATORIO_AVALIACAO_RISCO" pool-name="SIBAR.RSP.RELATORIO_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.RELATORIO_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.AVALIACAO_RISCO_PROTOCOLO" pool-name="SIBAR.RSP.AVALIACAO_RISCO_PROTOCOLO">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.AVALIACAO_RISCO_PROTOCOLO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="com.ibm.mq.connector.outbound.MQQueueProxy" jndi-name="java:/jms/SIBAR.RSP.CONSULTA_AVALIACAO_RISCO" pool-name="SIBAR.RSP.CONSULTA_AVALIACAO_RISCO">
+                            <config-property name="baseQueueName">
+                                SIBAR.RSP.CONSULTA_AVALIACAO_RISCO
+                            </config-property>
+                            <config-property name="CCSID">
+                                500
+                            </config-property>
+                            <config-property name="targetClient">
+                                MQ
+                            </config-property>
+                        </admin-object>
+                    </admin-objects>
+                </resource-adapter>
+            </resource-adapters>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:sar:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:security:1.2">
+            <security-domains>
+                <security-domain name="other" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapLoginModule" flag="required">
+                            <module-option name="java.naming.factory.initial" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+                            <module-option name="java.naming.provider.url" value="ldap://df7390sr004:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="principalDNPrefix" value="uid="/>
+                            <module-option name="principalDNSuffix" value=",ou=People,o=caixa"/>
+                            <module-option name="rolesCtxDN" value="ou=Groups,o=caixa"/>
+                            <module-option name="uidAttributeID" value="uniqueMember"/>
+                            <module-option name="matchOnUserDN" value="true"/>
+                            <module-option name="roleAttributeID" value="cn"/>
+                            <module-option name="roleAttributeIsDN" value="false"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sifec" cache-type="default">
+                    <authentication>
+                        <login-module code="Remoting" flag="required">
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                        <login-module code="RealmUsersRoles" flag="required">
+                            <module-option name="usersProperties" value="${jboss.server.config.dir}/application-users.properties"/>
+                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/application-roles.properties"/>
+                            <module-option name="realm" value="ApplicationRealm"/>
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sifec-local" cache-type="default">
+                    <authentication>
+                        <login-module code="Remoting" flag="required">
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                        <login-module code="RealmUsersRoles" flag="required">
+                            <module-option name="usersProperties" value="${jboss.server.config.dir}/application-users.properties"/>
+                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/application-roles.properties"/>
+                            <module-option name="realm" value="ApplicationRealm"/>
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-siccr" cache-type="default">
+                    <authentication>
+                        <login-module code="Remoting" flag="required">
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                        <login-module code="RealmUsersRoles" flag="required">
+                            <module-option name="usersProperties" value="${jboss.server.config.dir}/application-users.properties"/>
+                            <module-option name="rolesProperties" value="${jboss.server.config.dir}/application-roles.properties"/>
+                            <module-option name="realm" value="ApplicationRealm"/>
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sifec-caixa" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="sufficient">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.230.151:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIFEC,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                        <login-module code="org.jboss.security.auth.spi.LdapLoginModule" flag="sufficient">
+                            <module-option name="java.naming.factory.initial" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+                            <module-option name="java.naming.provider.url" value="ldap://df7390sr004:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="principalDNPrefix" value="uid="/>
+                            <module-option name="principalDNSuffix" value=",ou=People,o=caixa"/>
+                            <module-option name="rolesCtxDN" value="ou=Groups,o=caixa"/>
+                            <module-option name="uidAttributeID" value="uniqueMember"/>
+                            <module-option name="matchOnUserDN" value="true"/>
+                            <module-option name="roleAttributeID" value="cn"/>
+                            <module-option name="roleAttributeIsDN" value="false"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                        </login-module>
+                        <login-module name="org.jboss.security.auth.spi.LdapLoginModule-2" code="org.jboss.security.auth.spi.LdapLoginModule" flag="sufficient">
+                            <module-option name="java.naming.factory.initial" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.228.116:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="principalDNPrefix" value="uid="/>
+                            <module-option name="principalDNSuffix" value=",ou=People,o=caixa_des"/>
+                            <module-option name="rolesCtxDN" value="ou=Groups,o=caixa_des"/>
+                            <module-option name="uidAttributeID" value="uniqueMember"/>
+                            <module-option name="matchOnUserDN" value="true"/>
+                            <module-option name="roleAttributeID" value="cn"/>
+                            <module-option name="roleAttributeIsDN" value="false"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-siric" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="sufficient">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.230.151:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIRIC,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                        <login-module name="org.jboss.security.auth.spi.LdapLoginModule-2" code="org.jboss.security.auth.spi.LdapLoginModule" flag="sufficient">
+                            <module-option name="java.naming.factory.initial" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.228.116:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="principalDNPrefix" value="uid="/>
+                            <module-option name="principalDNSuffix" value=",ou=People,o=caixa_des"/>
+                            <module-option name="rolesCtxDN" value="ou=Groups,o=caixa_des"/>
+                            <module-option name="uidAttributeID" value="uniqueMember"/>
+                            <module-option name="matchOnUserDN" value="true"/>
+                            <module-option name="roleAttributeID" value="cn"/>
+                            <module-option name="roleAttributeIsDN" value="false"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sigec" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="sufficient">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.230.151:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIGEC,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sifec-tqs" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="required">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.192.230.151:1389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIFEC,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="other2" cache-type="default">
+                    <authentication>
+                        <login-module code="Remoting" flag="optional">
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                        <login-module code="RealmDirect" flag="required">
+                            <module-option name="password-stacking" value="useFirstPass"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jboss-web-policy" cache-type="default">
+                    <authorization>
+                        <policy-module code="Delegating" flag="required"/>
+                    </authorization>
+                </security-domain>
+                <security-domain name="jboss-ejb-policy" cache-type="default">
+                    <authorization>
+                        <policy-module code="Delegating" flag="required"/>
+                    </authorization>
+                </security-domain>
+                <security-domain name="jaas-local-ldap" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="sufficient">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.1.12.45:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIFES,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="jaas-sifes" cache-type="default">
+                    <authentication>
+                        <login-module code="org.jboss.security.auth.spi.LdapExtLoginModule" flag="sufficient">
+                            <module-option name="allowEmptyPasswords" value="true"/>
+                            <module-option name="baseCtxDN" value="ou=people,o=caixa"/>
+                            <module-option name="baseFilter" value="(uid={0})"/>
+                            <module-option name="java.naming.provider.url" value="ldap://10.1.12.45:389"/>
+                            <module-option name="java.naming.security.authentication" value="simple"/>
+                            <module-option name="roleAttributeID" value="dn"/>
+                            <module-option name="roleAttributeIsDN" value="true"/>
+                            <module-option name="roleFilter" value="(uniqueMember=uid={0},ou=people,o=caixa)"/>
+                            <module-option name="roleNameAttributeID" value="cn"/>
+                            <module-option name="rolesCtxDN" value="cn=SIFES,ou=Groups,o=caixa"/>
+                            <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+                            <module-option name="searchTimeLimit" value="5000"/>
+                            <module-option name="throwValidateError" value="true"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                <security-domain name="keycloak">
+                    <authentication>
+                        <login-module code="org.keycloak.adapters.jboss.KeycloakLoginModule" flag="required"/>
+                    </authentication>
+                </security-domain>
+            </security-domains>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:threads:1.1"/>
+        <subsystem xmlns="urn:jboss:domain:transactions:1.5">
+            <core-environment>
+                <process-id>
+                    <uuid/>
+                </process-id>
+            </core-environment>
+            <recovery-environment socket-binding="txn-recovery-environment" status-socket-binding="txn-status-manager"/>
+            <coordinator-environment default-timeout="300"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:web:2.1" default-virtual-server="default-host" native="false">
+            <connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/>
+            <connector name="ajp" protocol="AJP/1.3" scheme="http" socket-binding="ajp"/>
+            <virtual-server name="default-host" enable-welcome-root="true">
+                <alias name="localhost"/>
+                <alias name="df7390et992"/>
+                <sso cache-container="web" cache-name="sso" reauthenticate="false"/>
+            </virtual-server>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:webservices:1.2">
+            <modify-wsdl-address>true</modify-wsdl-address>
+            <wsdl-host>${jboss.bind.address:127.0.0.1}</wsdl-host>
+            <endpoint-config name="Standard-Endpoint-Config"/>
+            <endpoint-config name="Recording-Endpoint-Config">
+                <pre-handler-chain name="recording-handlers" protocol-bindings="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM">
+                    <handler name="RecordingHandler" class="org.jboss.ws.common.invocation.RecordingServerHandler"/>
+                </pre-handler-chain>
+            </endpoint-config>
+            <client-config name="Standard-Client-Config"/>
+        </subsystem>
+        <subsystem xmlns="urn:jboss:domain:weld:1.0"/>
+        <subsystem xmlns="urn:jboss:domain:keycloak:1.1">
+            <realm name="intranet">
+                <auth-server-url>https://login.des.caixa/auth</auth-server-url>
+                <ssl-required>none</ssl-required>
+                <disable-trust-manager>true</disable-trust-manager>
+            </realm>
+            <realm name="internet">
+                <auth-server-url>https://logindes.caixa.gov.br/auth</auth-server-url>
+                <ssl-required>none</ssl-required>
+                <disable-trust-manager>true</disable-trust-manager>
+            </realm>
+            <secure-deployment name="fec-web.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+            <secure-deployment name="fec-api.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+            <secure-deployment name="ccr-web.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+            <secure-deployment name="ccr-api.war">
+                <realm>internet</realm>
+                <resource>cli-web-fec</resource>
+                <bearer-only>true</bearer-only>
+                <credential name="secret">de0ddc53-641c-4c38-bb48-0912d9d8227f</credential>
+            </secure-deployment>
+            <secure-deployment name="hub-api.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+            <secure-deployment name="hub-web.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+            <secure-deployment name="simtr-rest-web.war">
+                <realm>intranet</realm>
+                <resource>cli-web-fec</resource>
+                <auth-server-url>https://login.des.caixa/auth</auth-server-url>
+                <ssl-required>none</ssl-required>
+                <disable-trust-manager>true</disable-trust-manager>
+                <credential name="secret">36ab01d0-f1a5-4b1b-9a76-839553c7a6a9</credential>
+            </secure-deployment>
+        </subsystem>
+    </profile>
+
+    <interfaces>
+        <interface name="management">
+            <inet-address value="127.0.0.1"/>
+        </interface>
+        <interface name="public">
+            <inet-address value="127.0.0.1"/>
+        </interface>
+        <interface name="unsecure">
+            <inet-address value="127.0.0.1"/>
+        </interface>
+    </interfaces>
+
+    <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
+        <socket-binding name="management-native" interface="management" port="${jboss.management.native.port:9999}"/>
+        <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
+        <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9443}"/>
+        <socket-binding name="ajp" port="8009"/>
+        <socket-binding name="http" port="8181"/>
+        <socket-binding name="https" port="8443"/>
+        <socket-binding name="jacorb" interface="unsecure" port="3528"/>
+        <socket-binding name="jacorb-ssl" interface="unsecure" port="3529"/>
+        <socket-binding name="jgroups-mping" port="0" multicast-address="${jboss.default.multicast.address:230.0.0.5}" multicast-port="45700"/>
+        <socket-binding name="jgroups-tcp" port="7600"/>
+        <socket-binding name="jgroups-tcp-fd" port="57600"/>
+        <socket-binding name="jgroups-udp" port="55200" multicast-address="${jboss.default.multicast.address:230.0.0.5}" multicast-port="45688"/>
+        <socket-binding name="jgroups-udp-fd" port="54200"/>
+        <socket-binding name="messaging" port="5445"/>
+        <socket-binding name="messaging-group" port="0" multicast-address="${jboss.messaging.group.address:231.7.7.7}" multicast-port="${jboss.messaging.group.port:9876}"/>
+        <socket-binding name="messaging-throughput" port="5455"/>
+        <socket-binding name="remoting" port="4447"/>
+        <socket-binding name="txn-recovery-environment" port="4712"/>
+        <socket-binding name="txn-status-manager" port="4713"/>
+        <outbound-socket-binding name="mail-smtp">
+            <remote-destination host="localhost" port="25"/>
+        </outbound-socket-binding>
+    </socket-binding-group>
+
+    <deployments>
+        <deployment name="wmq.jmsra.rar" runtime-name="wmq.jmsra.rar">
+            <content sha1="73f3f95d33993f968113d1ff268860bbbc737daa"/>
+        </deployment>
+        <deployment name="framework.jar" runtime-name="framework.jar">
+            <content sha1="bee2a4602a1e9785994c5ddf82c3153f64c70fc7"/>
+        </deployment>
+        <deployment name="framework_sisgd.jar" runtime-name="framework_sisgd.jar">
+            <content sha1="c0f86db39be7f6da6faa494efe3378a9a8c0d56d"/>
+        </deployment>
+    </deployments>
+</server>

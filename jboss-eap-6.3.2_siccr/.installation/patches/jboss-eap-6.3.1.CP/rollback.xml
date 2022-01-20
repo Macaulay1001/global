@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<patch xmlns="urn:jboss:patch:rollback:1.0" id="base">
+    <description>
+        rollback patch
+    </description>
+    <upgrade name="EAP" version="6.3.1.GA" to-version="6.3.0.GA"/>
+    <element id="base">
+        <description>
+            no description
+        </description>
+        <upgrade name="base"/>
+        <modules>
+            <updated name="com.sun.jsf-impl" hash="5e13b3c2a7dc4a8f1744fb64e7dde3c9138ca95c" new-hash="f326e9d80ec3362d92b9346b34715a1a00575a92"/>
+            <updated name="com.sun.xml.bind" hash="9fed5dac8179bfa84bb19d9a399ba0068e61eb4f" new-hash="a52c636569840367732479121ef675f94618697d"/>
+            <updated name="org.apache.httpcomponents" hash="bc08674113b0fd91b3796bb583f0abeacd1175f1" new-hash="a1a079198132061d82743372b9cad2e8d4b9106e"/>
+            <updated name="org.hibernate.envers" hash="c08531374d2389bc59d9123ac44e90c5f3088a76" new-hash="04c34459d958a18102a7e0caaaff57cc2a30ee5e"/>
+            <updated name="org.hibernate.validator" hash="b848bd9ca668f6cf12ed193b48e7358a37871221" new-hash="0b07e13c00414a71e5b0a0abc454f13be3719c7e"/>
+            <updated name="org.hibernate" hash="5629c83e00504e2f32b989dc6ecbb25242b85a2a" new-hash="dda0b3a945466909a7c14d3217d97b6a2fc4c3cf"/>
+            <updated name="org.hornetq.ra" hash="7dde4a031aa5aa43a9e36bca8b52188d1e326c10" new-hash="65ae1364a1e0dda40bd268b619bd4971f22c52a6"/>
+            <updated name="org.hornetq" hash="49f794d65773257dcb42b9f4efe9754b59fa48f6" new-hash="6759a434d03614733d8ab0e826d4357352703409"/>
+            <updated name="org.jboss.as.appclient" hash="3dbca2c38700fef53441235cf0955b1e9f21e910" new-hash="527c409bbb8ba5fed5d1ce73180c6a1f2864c1eb"/>
+            <updated name="org.jboss.as.cli" hash="8a5dd12edfcde9b3ac2cf37177fc281cdf42ab8c" new-hash="c2211d7e39907aa9038ddcccfa751d534daaa4d8"/>
+            <updated name="org.jboss.as.clustering.api" hash="0980c933a3bcc192b1baeab4f91bf6c5854ede4e" new-hash="60d3692641261935b0f6d3ff9253fcd0a24604b1"/>
+            <updated name="org.jboss.as.clustering.common" hash="233ded0aa101e33abbde07f78742223311cfd4c3" new-hash="7d5056982e29fe2eba856e2592dcbbfb9df8a1eb"/>
+            <updated name="org.jboss.as.clustering.ejb3.infinispan" hash="05bf761a8e5348f6ad28568bf9fb129583606191" new-hash="83cf56c666d000ab2f04b196f797505a2e9a8d13"/>
+            <updated name="org.jboss.as.clustering.impl" hash="f1cfa03c72d26482895768de49499e3243dd03f5" new-hash="73909a04d15db87b7fcbc7b82795b0e55693123d"/>
+            <updated name="org.jboss.as.clustering.infinispan" hash="b19f8a8f9b1f266f8088d6aa06d7220498c299d4" new-hash="ea991fd9ef182b530ac5f27041041fd9bc103310"/>
+            <updated name="org.jboss.as.clustering.jgroups" hash="4a63c50822d5e1530ea4311f78d9a1dcac30e366" new-hash="2efe9e32eab224844a49e54e73f635ab73031391"/>
+            <updated name="org.jboss.as.clustering.registry" hash="4ebd4e52c56a4fc3026154cf7e0a7a7adac23cff" new-hash="a3b3ee422994bcec8101dbf5e85b4973652a1ff2"/>
+            <updated name="org.jboss.as.clustering.service" hash="5ef67376958d1f0eac8ea1e274337726584deeae" new-hash="c2cf94f282741188ad28ead975104f242446e77f"/>
+            <updated name="org.jboss.as.clustering.singleton" hash="8b8d6e205879d96b549f0e6d61ca5d1a4b6fefef" new-hash="e90eac12c2c1c84597ae6ca34e94b872de4602b9"/>
+            <updated name="org.jboss.as.clustering.web.infinispan" hash="451ddf79eacfee3a73fa1d6ed69272f13e068abc" new-hash="4b33d982d3ffd83bd14edbcd19d903df137c224d"/>
+            <updated name="org.jboss.as.clustering.web.spi" hash="fb76ca2ab3f6c36f699c6940bccb9e94c4bf3b59" new-hash="f0d963132229f60b604728d2cdbfab99cf34e75a"/>
+            <updated name="org.jboss.as.cmp" hash="043ddb380595823d41a0d61a8b537e33cdccf83d" new-hash="7b3661da1db7fe4e3ee50e3d9d613b37e98ce9d4"/>
+            <updated name="org.jboss.as.configadmin" hash="fba29f4546fbd088b0733982c1e1ef4d4829e24a" new-hash="c81ec9c0ed956c888811fa5ba22834b3f24e5dfe"/>
+            <updated name="org.jboss.as.connector" hash="d44636caeff26fd09e4b3c76e3efd0ae7d51772b" new-hash="fd8501fc3adc55facbad889bd8a81dc1085d12ef"/>
+            <updated name="org.jboss.as.console" slot="eap" hash="97c159c748d092d581ae2097ce849e0a555204ec" new-hash="a56b87e4dfe4066262ffbd9b9d7bcee6961e20e1"/>
+            <updated name="org.jboss.as.controller-client" hash="ae386f062abbe75971e83e3b5e118ddea8f1b5a4" new-hash="3e5cd666b743756abb2aa6aa6cca08551c9b4da1"/>
+            <updated name="org.jboss.as.controller" hash="0b4a13e0582ee085bf551fbcdeea5ece5c03217d" new-hash="0c26de1979d653fa915bbeaeb122a0bfb6200827"/>
+            <updated name="org.jboss.as.core-security-api" hash="b3e45a283bab7f83774acdc57c0c7f7cc4086d90" new-hash="fbb255e80867572404822d884b5e95d81d407a11"/>
+            <updated name="org.jboss.as.core-security" hash="c19c2d1170bad56ea835e3d27f37c371f84344e0" new-hash="34568a8b6133cdf49e9cfbb793894bb7f84aa2d8"/>
+            <updated name="org.jboss.as.deployment-repository" hash="f1a3ff181329583464a4ad20cb87443025c63f6b" new-hash="c8364b6813b6c9f9ec9808ebedcefaf1071eeb95"/>
+            <updated name="org.jboss.as.deployment-scanner" hash="3c755cd37b0da05ff56d936e5d435f5c03c68efc" new-hash="9cbe3e190747797abb41315b2b4258ceb4376e6f"/>
+            <updated name="org.jboss.as.domain-http-interface" hash="1893d73fe845524a4ef59636bc8576bc8ceaafab" new-hash="78a1f8793afae6771eca7e288a5c0b2920fb1e06"/>
+            <updated name="org.jboss.as.domain-management" hash="c7902cefa80cb051536916cb12afdbf50dbf9610" new-hash="b34975713ab3ac52c6417ac58faf8bb68e40baea"/>
+            <updated name="org.jboss.as.ee.deployment" hash="0bb526bec633cf1388e822b2c4c31123a2f6cb7a" new-hash="29c93d2e8561f024570d8825bae6c104042dbcac"/>
+            <updated name="org.jboss.as.ee" hash="7ab54dafec6380bca77f872387d354697dda834b" new-hash="b709eb8b8a080f6444107f6ae67e6459cfc06e0a"/>
+            <updated name="org.jboss.as.ejb3" hash="56cc30d76328ba0d0576c99f83889e169f9e2baf" new-hash="f00670c6e4f3b4c010cf5b8c4cee92632b1f1442"/>
+            <updated name="org.jboss.as.embedded" hash="650363cdf020b1324b7317b1e8547e08d886ad91" new-hash="db53854e80710341a2f6aa13377aa0ab990137ec"/>
+            <updated name="org.jboss.as.host-controller" hash="4b0cf619f303cfd2c0ff09363014083797047440" new-hash="a89d07aa886402ec84db08df2fa99c03b026b9d8"/>
+            <updated name="org.jboss.as.jacorb" hash="f9ac6aa587efeeb552693c93925f6824e4f05c63" new-hash="078b1d991085a1fe68cccd079823f3483fc43a40"/>
+            <updated name="org.jboss.as.jaxr" hash="86331dcc168fffeb3015fb21a48af61e2bc41531" new-hash="236f87f8899519489850589e01bca1020cc30a40"/>
+            <updated name="org.jboss.as.jaxrs" hash="b56309585c265241ba6f52d68b457150d9be3efa" new-hash="7278a638fefca4e2ff77fdb6af46792ba77e7200"/>
+            <updated name="org.jboss.as.jdr" hash="fc8553cd18ef5bb35d03566d19fc9ecece4d56d5" new-hash="09d23964ae98849a7622c2bc1b250e9f51e24660"/>
+            <updated name="org.jboss.as.jmx" hash="28ed24b9aec132ad487e93a1b6b349c8341ded75" new-hash="6b4b89ad179419fed6ec029d95fddcd6b3223405"/>
+            <updated name="org.jboss.as.jpa.hibernate" slot="3" hash="6fef55ef9eef46b4dda2dea7ef307719856bf9ab" new-hash="bfc0577909685b5c1cdc1bda8817c1fefb581042"/>
+            <updated name="org.jboss.as.jpa.hibernate" slot="4" hash="06a86ec01829dadd48fd7a3e03ad399d69f71ac9" new-hash="92468f41b9337e1e2735b59089d64a1fd2f122ad"/>
+            <updated name="org.jboss.as.jpa.spi" hash="7579548964893973cc5637f57639e369a92820a0" new-hash="3529b8b025dde7f1e754dfead8bda3ea39757dfa"/>
+            <updated name="org.jboss.as.jpa.util" hash="1c49cf35f5e214a70c311ca6fc42f818e486b334" new-hash="c1203b95f80734d912eca714443d2c41c9a04199"/>
+            <updated name="org.jboss.as.jpa" hash="1bb63cc3d29abc6b34abbb0e000fb8ef61c936c5" new-hash="db294d7cc11aad1b678642d3cb39ecac2ab73902"/>
+            <updated name="org.jboss.as.jsf-injection" slot="1.2" hash="c0c865be70a31916a6d1f2d69df97f5ebae286a9" new-hash="6c002cfaa999b332b4cf3e7ddd9937154c1e1d72"/>
+            <updated name="org.jboss.as.jsf-injection" hash="56ccac84cf43dfa905dd0251546311f868863fa3" new-hash="aaf438704df10d60a2ed69c4ff7d038d585debaa"/>
+            <updated name="org.jboss.as.jsf" hash="ed0f046f75373e81e90082c9dd063d3b9042ab26" new-hash="f80fe29c199b8764f85f456be539dbd614607dd9"/>
+            <updated name="org.jboss.as.jsr77" hash="a9af436f677a30048d61bf06f96743ea86d5df8d" new-hash="53627490ec1cca2c787426f6514bb8d7152e2767"/>
+            <updated name="org.jboss.as.logging" hash="eb1983c65c3575a4f95651f5bb51f4f6d60f3466" new-hash="aa261f9e28dbcc3add6616c1794f63bf94c757cb"/>
+            <updated name="org.jboss.as.mail" hash="9992758751b93cd2a1bcc5b862a9602e36246217" new-hash="655504f05c7a2338ef02a6104b085e3784331949"/>
+            <updated name="org.jboss.as.management-client-content" hash="6e5900dd35e19fa8c8e6a79b16baeb6aa40b2a6d" new-hash="77f5eb12a9f983af0e0a7be0d9dc4adbf678de2a"/>
+            <updated name="org.jboss.as.messaging" hash="c091e0ea911c1a311f1160ab1c60d2c64331a085" new-hash="79b55fe851959c6d4ee647f17af282cba90c72ee"/>
+            <updated name="org.jboss.as.modcluster" hash="cb6c3ebb73b851749a8f51ff2a649f9e09a6d5e8" new-hash="163f996b69333cd612080999efb22c53abb4340e"/>
+            <updated name="org.jboss.as.naming" hash="ce6fc94f74e415f2abdbfe63b6cb4a6f60046f81" new-hash="e28d09252b4144960655aedc6850cc9e3aeb7e69"/>
+            <updated name="org.jboss.as.network" hash="b794e230ba755c06162019b0c13ffc2e4a9d7841" new-hash="35c8d7e5f0be8fb52246eedcef458f8a94eade34"/>
+            <updated name="org.jboss.as.osgi.http" hash="a700964eda026fff27082d073b6aeaab224dc534" new-hash="be8bcaf2ce9fdc023dda246b883b6f73e87d4cdd"/>
+            <updated name="org.jboss.as.osgi.jmx" hash="865bb6cb94227a2e7dcc2eaef65dc1ee114ae227" new-hash="29a4f937a84c1ebbc59b068bbbf54d9a41ee21f9"/>
+            <updated name="org.jboss.as.osgi.jpa" hash="71c63f7a1f5df8feb52f6726dcca35212d233aa9" new-hash="b952756e3bacc759869eae09c5232a25e550c5c1"/>
+            <updated name="org.jboss.as.osgi.jta" hash="4037dc7847e8745379c31cba51641223a2c5c8a2" new-hash="335f59fb99aa0e4339c92055687f7e9cc4c8751c"/>
+            <updated name="org.jboss.as.osgi.naming" hash="5bad0859b1b1f6b4d8d2ed8a4e0889db70bb75c1" new-hash="2a9e7f382e0c0b6fbc2dc75357d12ef3d80b8d67"/>
+            <updated name="org.jboss.as.osgi.web" hash="ea7f516d72314a998f1fc646f53d0a852192dc16" new-hash="3f779ee73b1d9d939a243ad74f02038d4c12b016"/>
+            <updated name="org.jboss.as.osgi" hash="7d1a0a12bfaa1a525d144e17ff875217a69a35fe" new-hash="1cbc134d816fa23b7ef82a5623dd3c612139d273"/>
+            <updated name="org.jboss.as.patching" hash="172485f2312d2e0eee755042d1cb3aba2b3a94c2" new-hash="04b8bd91ac4614645f09e2b1c84a29248f3cf364"/>
+            <updated name="org.jboss.as.platform-mbean" hash="081d6ca528c7bf447156e5979d382b6055616a3f" new-hash="a71f8ba0dcf8eef0cc653532d38c0aa53e476d54"/>
+            <updated name="org.jboss.as.pojo" hash="225979c87c97f51a618e8e565619dbe07019e2d2" new-hash="8b23f4c35084b967f6e78ed1d6e4ba3ab284b420"/>
+            <updated name="org.jboss.as.process-controller" hash="e657db9ec44fba1b722673b5743bda4a83bf2d70" new-hash="387effd61e012b3ecc5f4c5720f5a17729783563"/>
+            <updated name="org.jboss.as.product" slot="eap" hash="37281abca02da5fe0afc179ca80ba7578d51d038" new-hash="b2aae55ae244cd603db5157ea643d85af30ab148"/>
+            <updated name="org.jboss.as.protocol" hash="cdc429019986b026f360f832686c1af7a84737b9" new-hash="d65089558789cdffb27c7a1a07f985eadfe437e3"/>
+            <updated name="org.jboss.as.remoting" hash="9a4797e93ac2416a5d4fe7634a34a510dd56e4f4" new-hash="a3f2f9bc382605d3d5069b0d222e5a36e372d273"/>
+            <updated name="org.jboss.as.sar" hash="a9a6af888e6c655fa1eb1a5fdedb5d38557197db" new-hash="81fceb070f8aa1aa6dbc86d96eb206af387eb3b7"/>
+            <updated name="org.jboss.as.security-api" hash="a0170c66444fdd179d17d1d6292f348017899950" new-hash="bf9f7268431668a94c5cb5f3c949cff0fd446c69"/>
+            <updated name="org.jboss.as.security" hash="5861aa6e13d7a235c6cf17da6f33e44f96a356eb" new-hash="81d1b34ccd5abccd3b2e5ae45c4096457a10a985"/>
+            <updated name="org.jboss.as.server" hash="950beaff00db29626394b87b5a59180b1c496f06" new-hash="2b2ddf5e7de2c7935eed419dfd29587d78ca39b8"/>
+            <updated name="org.jboss.as.system-jmx" hash="1b182371ff0c303d30988424dac6ae5b9edbe386" new-hash="409e64d4f0aceb45b5b324ebdf10abbec7ab91bf"/>
+            <updated name="org.jboss.as.threads" hash="6751ad04f4bede032ac15875c8b871f4ea018185" new-hash="afd6c8a12ef6e41832cae204ca3cd9f53b26df03"/>
+            <updated name="org.jboss.as.transactions" hash="d577d555fc2d9f3f30a202185e6f198f387e834e" new-hash="d61d115f1d4758162edfda2e9f10c27571a9439a"/>
+            <updated name="org.jboss.as.version" hash="32a20e64778901a7e9cc83988d28f07f5233293e" new-hash="fcb77f0b8f1a356406843de083d2c45342600f2f"/>
+            <updated name="org.jboss.as.web" hash="80e0841fd5d8e1cbea3d6a33ffe289100d13d3c2" new-hash="f53af7018581a98cf0f7b51a053ae90345be0e4a"/>
+            <updated name="org.jboss.as.webservices" hash="96eb6381fb838191fabbdad1bfac6ddb131dbd39" new-hash="d504bcf0208bfd248e2a8a56d9cc41732d7838c1"/>
+            <updated name="org.jboss.as.weld" hash="d54fc035824e93f7c4bc166c524bdbc277d7fe7a" new-hash="a340174aa8ba9437db25d9d6fabc64c34cbe0ce8"/>
+            <updated name="org.jboss.as.xts" hash="cb55d6808e1986fbc6cad404b406cf1946136c22" new-hash="40b5b7a7b61539bad9679a2591809abf2703b5b9"/>
+            <updated name="org.jboss.ejb-client" hash="fd04bfe0045c7dba071b844ac48bb38fa6649bd6" new-hash="821b4606dd4a2614a19a055ea61e3c8df79e5986"/>
+            <updated name="org.jboss.ironjacamar.api" hash="a3fce145f468d1c35f8f3437a01dcfc052861d75" new-hash="2426eeac1589bfceba2eb934483aebe0a11de535"/>
+            <updated name="org.jboss.ironjacamar.impl" hash="e8168bef8c0bc45c866559e7f674378bbaac3c59" new-hash="f440f99ac17b40eed3e09b76f87a8c1f7704965d"/>
+            <updated name="org.jboss.ironjacamar.jdbcadapters" hash="0e59de40b3571e2dc030b8888eade864ab0c9daa" new-hash="687e584cea9f5f7a98e5126887560d630c6a9091"/>
+            <updated name="org.jboss.jts.integration" hash="41ff8916ba557bc04f95f711d307897bd1a1c663" new-hash="bc17b51d1b9cdbc44f48fbee5a2d2e24a3a967c4"/>
+            <updated name="org.jboss.jts" hash="277912087daf62cadc54395b34cac5d22bfe8383" new-hash="0450de9201b4291f1e0b8b4f5e27f4ad0b440fc0"/>
+            <updated name="org.jboss.marshalling.river" hash="9939edad8a1eaeb242a6852697518c609ebd66d5" new-hash="c1832536db35202e353b97175a38f251a1d47763"/>
+            <updated name="org.jboss.marshalling" hash="c53e842a02da88dabc6d662cc75d0c9572ab43b5" new-hash="9e222f22945b73ba18fb4172cb9349fdf55e3338"/>
+            <updated name="org.jboss.remote-naming" hash="388441b62c66a543b0c4f99bbf8c0542ef176442" new-hash="d2af43a43dc4e0f3ad95d2b75ccb6bc0c7dd5024"/>
+            <updated name="org.jboss.remoting3" hash="506849f41ca6b04744befd0b82128072602dd1e1" new-hash="a5f3b37f5919f267d6565987785cf09694da010a"/>
+            <updated name="org.jboss.resteasy.resteasy-atom-provider" hash="a3fdce8b6d54ff5eca3bed1ac5fde43f6d9d1e4b" new-hash="8865b4bd4efc263403321278a46ce736ee90e846"/>
+            <updated name="org.jboss.resteasy.resteasy-cdi" hash="3feb53043782403cba326d154ac7eb45071347a0" new-hash="6285a87a266a0ab12af7b322a71b2ef695f5734f"/>
+            <updated name="org.jboss.resteasy.resteasy-hibernatevalidator-provider" hash="ed4f3e512f33af4af147f38c55974652a635504a" new-hash="33a35423c80bacb148f312ff0c359bde2171db0c"/>
+            <updated name="org.jboss.resteasy.resteasy-jackson-provider" hash="0067a453b621b2f727b0cd4a0b70781412ae0fe0" new-hash="c3c6879f61bd27f8a0f38423441fc251c78fae37"/>
+            <updated name="org.jboss.resteasy.resteasy-jaxb-provider" hash="9170d2c240ff8ac940fa9b5d1b23fec5d02c2efe" new-hash="fc953afeee8860baa262149f9d5924cff420bccc"/>
+            <updated name="org.jboss.resteasy.resteasy-jaxrs" hash="58e916c4c7a3c3799e869dfb0387c27d96f93a13" new-hash="5344898854b3a06edd25702ce630b6df0b00f06a"/>
+            <updated name="org.jboss.resteasy.resteasy-jettison-provider" hash="d01d86fdb1d36f83953aadd6fc68d090fc582a2f" new-hash="fc2905f63900427a6c0164d15d16c0687bb63b78"/>
+            <updated name="org.jboss.resteasy.resteasy-jsapi" hash="4b9e0cb1a40eed5ec43c69205c114c6e83fbf716" new-hash="2c4bdbc789fa6af0de726ccbb5d121241b840fa4"/>
+            <updated name="org.jboss.resteasy.resteasy-multipart-provider" hash="5f3806c57babc4dfbfde0d70eec6e798852b2ecb" new-hash="17c8f35a8b85a2818e7e8fd25094dcd22857674b"/>
+            <updated name="org.jboss.resteasy.resteasy-spring" hash="c98233cb1936b690b12f3910b2dda94374f56583" new-hash="6ad220db3ad06a11142a0066d0d362bb7b79b787"/>
+            <updated name="org.jboss.resteasy.resteasy-yaml-provider" hash="caf369261cf39a24ad080e2fd4dacfd43aace4b6" new-hash="ad7a20971e70c222969688c8cdb6d66b8253f581"/>
+            <updated name="org.jboss.security.negotiation" hash="a1efa16fa821e801116171dc44d8464d3e7df99c" new-hash="347e6f3f88fe6ae8eb0ba4f1030698be4e40c12d"/>
+            <updated name="org.jboss.xts" hash="d286136174e308ed0de88c07610456bd18a01ce9" new-hash="141f3dc4a76f44755690870520e73fa861e75954"/>
+            <updated name="org.wildfly.extension.picketlink" hash="6ac10955c1c88b6f7b042d071896c1cd1c158bbd" new-hash="3c86968f8b3a7644fa04c15b18ecbd13574081b5"/>
+        </modules>
+        <bundles>
+            <updated name="org.jboss.as.osgi.configadmin" hash="f8cc96f03da87d5952bf802b078362623379d672" new-hash="0d6e486bf7f1838fa52d5deae43775667d0f5b8a"/>
+        </bundles>
+    </element>
+    <misc-files>
+        <updated path="bin/client/jboss-cli-client.jar" hash="d647e2e4012bab522077a387979de0a913a8631f" new-hash="d053be04877283fdf7751e9711b2de357f37a83f"/>
+        <updated path="bin/client/jboss-client.jar" hash="1d43315d0cb62607da8d8c938cfffc59b3954f08" new-hash="c9d4f9ba12d22509c266946925952bb091c8a726"/>
+        <updated path="jboss-modules.jar" hash="33e07de28b802432188b846ec3b10edb35d36480" new-hash="0e207f2995b9ba5f1511c585724b7fa8e97fc29f"/>
+        <updated path="version.txt" hash="14e42bc3353e543dd615714b0a602ec11080a5da" new-hash="4a33e8a1ae0996e0463601a0bea4de630ac3d61d"/>
+    </misc-files>
+    <installation>
+        <identity name="EAP" release-id="base"/>
+        <layer name="base" release-id="base"/>
+    </installation>
+</patch>

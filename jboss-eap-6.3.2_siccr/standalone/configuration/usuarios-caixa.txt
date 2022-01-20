@@ -1,0 +1,37 @@
+Grupo                Usuário                    Senha       PERFIL
+FEC0100              c891811                    Fec123      Técnico Agência
+FEC0102              c891813                    Fec123      Gerente Agência
+FEC0110              c891818                    Fec123      GEPOP, GEVOP, SUAGR e GEGRO
+Tecnico Externo      usuario4@sifec.com.br      Sifec90     Tecnico Externo
+Empresa Externo      usuario3@sifec.com.br      Sifec90     Empresa Externo
+
+#######################################################################################################
+
+
+DES - CPF
+00048104817
+00116768096
+00206402180
+00277150434
+00527253677
+
+
+TQS  -  CPF
+00039919897
+00103867503
+00211044415
+00219810192
+00277150434
+
+
+DES – CNPJ
+01422574000110
+13474462000192
+87695232000190
+00673318000133
+17184037000110
+
+TQS – CNPJ
+01422574000110
+00673318000133
+17184037000110 

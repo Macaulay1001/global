@@ -1,0 +1,2127 @@
+----------------------------------START FFST------------------------------------
+C:\Kit\jboss-eap-6.3.2\bin\FFDC\JMSCC1439.FDC PID:6008
+
+                                    JMS Common Client First Failure Symptom Report
+                                            
+
+Product          :- IBM WebSphere MQ classes for JMS
+Date/Time        :- Thu Jun 08 18:01:53 BRT 2017
+System time      :- 1496955713042
+Operating System :- Windows 7
+UserID           :- julio.usantos
+Java Vendor      :- Oracle Corporation
+Java Version     :- 25.131-b11
+
+Source Class     :- com.ibm.msg.client.jms.internal.JmsProviderExceptionListener
+Source Method    :- run()
+ProbeID          :- XJ008001
+Thread           :- name=JMSCCThreadPoolWorker-3 priority=5 group=JMSCCThreadPool ccl=ModuleClassLoader for Module "deployment.wmq.jmsra.rar:main" from Service Module Loader
+
+                                      Data
+                                      ----
+
+|   Exception  :-  ExceptionDepth is 2
+|   Exception  :-  
+|   |   Cause:1       :-  java.util.ConcurrentModificationException
+|   |   StackTrace:1  :-  java.util.ConcurrentModificationException
+|   |   	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+|   |   	at java.util.ArrayList$Itr.next(ArrayList.java:851)
+|   |   	at com.ibm.mq.connector.outbound.ConnectionEventHandler.fireEvent(ConnectionEventHandler.java:129)
+|   |   	at com.ibm.mq.connector.outbound.ManagedConnectionImpl.onException(ManagedConnectionImpl.java:848)
+|   |   	at com.ibm.msg.client.jms.internal.JmsProviderExceptionListener.run(JmsProviderExceptionListener.java:427)
+|   |   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:214)
+|   |   	at com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:105)
+|   |   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:229)
+|   |   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:303)
+|   |   	at com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1219)
+|   |   
+|   Message    :-  JMSCC1026
+
+                              Version information
+                              -------------------
+
+IBM WebSphere MQ JMS Provider
+7.5.0.4
+p750-004-140807
+Production
+
+Common Services for Java Platform, Standard Edition
+7.5.0.4
+p750-004-140807
+Production
+
+Java Message Service Client
+7.5.0.4
+p750-004-140807
+Production
+
+WebSphere MQ classes for Java Message Service
+7.5.0.4
+p750-004-140807
+Production
+
+
+
+                                  Stack trace
+                                  -----------
+
+Stack trace to show the location of the FFST call
+|   FFST Location  :-  java.lang.Exception
+|   	at com.ibm.msg.client.commonservices.trace.Trace.getCurrentPosition(Trace.java:1967)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.createFFSTString(Trace.java:1906)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1795)
+|   	at com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1619)
+|   	at com.ibm.msg.client.jms.internal.JmsProviderExceptionListener.run(JmsProviderExceptionListener.java:441)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:214)
+|   	at com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:105)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:229)
+|   	at com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:303)
+|   	at com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1219)
+|   
+
+                            Property Store Contents
+                            -----------------------
+
+All currently set properties
+|   BASE                                                                 :-  ou=People,o=caixa_des
+|   INITIAL_CONTEXT_FACTORY                                              :-  com.sun.jndi.ldap.LdapCtxFactory
+|   SIAPX_PASSWORD                                                       :-  S279741
+|   SIAPX_USUARIO                                                        :-  SFECAPXD
+|   SIAPX_WS_DB1_HOST                                                    :-  www1.consignet.com.br
+|   SIAPX_WS_DB1_PASSWORD                                                :-  5FF37DCB5F0B76111BFBCFFDBC128B15
+|   SIAPX_WS_DB1_PORTA                                                   :-  8383
+|   SIAPX_WS_DB1_PROTOCOLO                                               :-  https
+|   SIAPX_WS_DB1_URL_BASE                                                :-  /DB1ConsignetWebService/services/WSConsignacao
+|   SIAPX_WS_DB1_USUARIO                                                 :-  WEBSERVICE_CAIXA@CAIXA
+|   SIAPX_WS_MPOG_COD_CONSIGNATARIA                                      :-  7032
+|   SIAPX_WS_MPOG_COD_CONVENIO                                           :-  703201
+|   SIAPX_WS_MPOG_HOST                                                   :-  hom5.siapenet.gov.br
+|   SIAPX_WS_MPOG_KEY_STORE_PASS                                         :-  changeit
+|   SIAPX_WS_MPOG_PASSWORD                                               :-  UB15W3NUCO
+|   SIAPX_WS_MPOG_PORTA                                                  :-  443
+|   SIAPX_WS_MPOG_PROTOCOLO                                              :-  https
+|   SIAPX_WS_MPOG_TRUST_STORE                                            :-  C:/Program Files/Java/jdk7/lib/security/cacerts
+|   SIAPX_WS_MPOG_TRUST_STORE_PASS                                       :-  changeit
+|   SIAPX_WS_MPOG_URL_BASE                                               :-  /wssiapeconsig/consignataria
+|   SIAPX_WS_MPOG_USUARIO                                                :-  WSCEFS01
+|   SIAPX_WS_ZETRA_CLIENTE                                               :-  CEF
+|   SIAPX_WS_ZETRA_HOST                                                  :-  www.econsig.com.br
+|   SIAPX_WS_ZETRA_PASSWORD                                              :-  cef12345
+|   SIAPX_WS_ZETRA_PROTOCOLO                                             :-  https
+|   SIAPX_WS_ZETRA_URL_BASE                                              :-  /central_homologa/services/HostaHostService/
+|   SIAPX_WS_ZETRA_USUARIO                                               :-  cef_xml
+|   SIARC_PASSWORD                                                       :-  SFECARCD
+|   SIARC_USUARIO                                                        :-  SFECARCD
+|   SIBAR_FABRICA_SICLI_CONSULTA_CLIENTE                                 :-  SicliQueueConnectionFactory
+|   SIBAR_FILA_SICLI_CONSULTA_CLIENTE_ENTRADA                            :-  SIBAR.REQ.CONSULTA_CLIENTE
+|   SIBAR_FILA_SICLI_CONSULTA_CLIENTE_SAIDA                              :-  SIBAR.RSP.CONSULTA_CLIENTE
+|   SIBAR_FILA_SICLI_CONSULTA_CLIENTE_TIMEOUT                            :-  1000
+|   SICCR_BASE_INTERNO                                                   :-  ou=People,o=caixa
+|   SIEMP_PASSWORD                                                       :-  S208706
+|   SIEMP_USUARIO                                                        :-  SEMPDB01
+|   SIFEC_USUARIO                                                        :-  SCNLFECD
+|   SIFES_BASE_EXTERNO                                                   :-  ou=People,o=caixa_des
+|   SIFES_BASE_INTERNO                                                   :-  ou=People,o=caixa
+|   SIFES_URL_LDAP_EXTERNO                                               :-  ldap://10.192.228.116:389
+|   SIFES_URL_LDAP_INTERNO                                               :-  ldap://10.192.230.151:389
+|   SIGEC_INTERNO_NOME_SISTEMA                                           :-  SIGEC
+|   SIGEC_INTERNO_SISGD_CONTENT_TYPE_PROPOSICOES                         :-  NO_SIGEC_001
+|   SIGEC_INTERNO_SISGD_NU_SEGTO                                         :-  3321
+|   SIGEC_INTERNO_SISGD_PASSWORD                                         :-  At89io34
+|   SIGEC_INTERNO_SISGD_SERVER_NAME                                      :-  GED_DES
+|   SIGEC_INTERNO_SISGD_USER                                             :-  SGECD001
+|   SIGEC_PASSWORD                                                       :-  s322657
+|   SIGEC_USUARIO                                                        :-  SGECTB01
+|   TESTE_MOCK_RETORNO_SICLI_PF                                          :-  true
+|   URL_CONSULTAR_BOLETO                                                 :-  http://10.192.225.5/sibar/ConsultaCobrancaBancaria/Boleto
+|   URL_LDAP_EXTERNO                                                     :-  ldap://10.192.228.116:389
+|   URL_MANUTENCAO_BOLETO                                                :-  http://10.192.225.5/sibar/ManutencaoCobrancaBancaria/Boleto
+|   URL_SIFEC                                                            :-  https://localhost:8080/
+|   awt.toolkit                                                          :-  sun.awt.windows.WToolkit
+|   catalina.home                                                        :-  C:\Kit\jboss-eap-6.3.2\standalone\tmp
+|   file.encoding                                                        :-  Cp1252
+|   file.encoding.pkg                                                    :-  sun.io
+|   file.separator                                                       :-  \
+|   java.awt.graphicsenv                                                 :-  sun.awt.Win32GraphicsEnvironment
+|   java.awt.headless                                                    :-  true
+|   java.awt.printerjob                                                  :-  sun.awt.windows.WPrinterJob
+|   java.class.path                                                      :-  C:\Kit\jboss-eap-6.3.2\jboss-modules.jar
+|   java.class.version                                                   :-  52.0
+|   java.endorsed.dirs                                                   :-  C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed
+|   java.ext.dirs                                                        :-  C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\windows\Sun\Java\lib\ext
+|   java.home                                                            :-  C:\Program Files\Java\jdk1.8.0_131\jre
+|   java.io.tmpdir                                                       :-  C:\Users\JULIO~1.USA\AppData\Local\Temp\
+|   java.library.path                                                    :-  C:\Program Files\Java\jdk1.8.0_131\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;native;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;;%JAVA_HOME%/bin;%JRE_HOME%/bin;;C:\Program Files (x86)\Bitvise SSH Client;C:\Kit\eclipse-neon;;.
+|   java.naming.factory.url.pkgs                                         :-  org.jboss.as.naming.interfaces:org.jboss.ejb.client.naming
+|   java.net.preferIPv4Stack                                             :-  true
+|   java.protocol.handler.pkgs                                           :-  org.jboss.net.protocol|org.jboss.vfs.protocol
+|   java.runtime.name                                                    :-  Java(TM) SE Runtime Environment
+|   java.runtime.version                                                 :-  1.8.0_131-b11
+|   java.specification.name                                              :-  Java Platform API Specification
+|   java.specification.vendor                                            :-  Oracle Corporation
+|   java.specification.version                                           :-  1.8
+|   java.util.logging.manager                                            :-  org.jboss.logmanager.LogManager
+|   java.vendor                                                          :-  Oracle Corporation
+|   java.vendor.url                                                      :-  http://java.oracle.com/
+|   java.vendor.url.bug                                                  :-  http://bugreport.sun.com/bugreport/
+|   java.version                                                         :-  1.8.0_131
+|   java.vm.info                                                         :-  mixed mode
+|   java.vm.name                                                         :-  Java HotSpot(TM) 64-Bit Server VM
+|   java.vm.specification.name                                           :-  Java Virtual Machine Specification
+|   java.vm.specification.vendor                                         :-  Oracle Corporation
+|   java.vm.specification.version                                        :-  1.8
+|   java.vm.vendor                                                       :-  Oracle Corporation
+|   java.vm.version                                                      :-  25.131-b11
+|   javax.management.builder.initial                                     :-  org.jboss.as.jmx.PluggableMBeanServerBuilder
+|   javax.net.debug                                                      :-  true
+|   javax.net.ssl.trustStore                                             :-  C:/Program Files/Java/jdk7/lib/security/cacerts
+|   javax.net.ssl.trustStorePassword                                     :-  changeit
+|   javax.xml.datatype.DatatypeFactory                                   :-  __redirected.__DatatypeFactory
+|   javax.xml.parsers.DocumentBuilderFactory                             :-  __redirected.__DocumentBuilderFactory
+|   javax.xml.parsers.SAXParserFactory                                   :-  __redirected.__SAXParserFactory
+|   javax.xml.stream.XMLEventFactory                                     :-  __redirected.__XMLEventFactory
+|   javax.xml.stream.XMLInputFactory                                     :-  __redirected.__XMLInputFactory
+|   javax.xml.stream.XMLOutputFactory                                    :-  __redirected.__XMLOutputFactory
+|   javax.xml.transform.TransformerFactory                               :-  __redirected.__TransformerFactory
+|   javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema  :-  __redirected.__SchemaFactory
+|   javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom      :-  __redirected.__XPathFactory
+|   jboss.bind.address                                                   :-  localhost
+|   jboss.bind.address.management                                        :-  localhost
+|   jboss.home.dir                                                       :-  C:\Kit\jboss-eap-6.3.2
+|   jboss.host.name                                                      :-  nbtitma121850
+|   jboss.modules.dir                                                    :-  C:\Kit\jboss-eap-6.3.2\modules
+|   jboss.modules.system.pkgs                                            :-  org.jboss.byteman
+|   jboss.node.name                                                      :-  nbtitma121850
+|   jboss.qualified.host.name                                            :-  nbtitma121850
+|   jboss.server.base.dir                                                :-  C:\Kit\jboss-eap-6.3.2\standalone
+|   jboss.server.config.dir                                              :-  C:\Kit\jboss-eap-6.3.2\standalone\configuration
+|   jboss.server.data.dir                                                :-  C:\Kit\jboss-eap-6.3.2\standalone\data
+|   jboss.server.deploy.dir                                              :-  C:\Kit\jboss-eap-6.3.2\standalone\data\content
+|   jboss.server.log.dir                                                 :-  C:\Kit\jboss-eap-6.3.2\standalone\log
+|   jboss.server.name                                                    :-  nbtitma121850
+|   jboss.server.persist.config                                          :-  true
+|   jboss.server.temp.dir                                                :-  C:\Kit\jboss-eap-6.3.2\standalone\tmp
+|   jgroups.logging.log_factory_class                                    :-  org.jboss.as.clustering.jgroups.LogFactory
+|   line.separator                                                       :-  
+|   
+|   logging.configuration                                                :-  file:/C:/Kit/jboss-eap-6.3.2/standalone/configuration/logging.properties
+|   minuta.channel                                                       :-  CHANNEL.SIFEC
+|   minuta.destination                                                   :-  SIFEC.REQ.GERAR_MINUTA
+|   minuta.hostName                                                      :-  cxextrux061.desenvolvimento.extracaixa
+|   minuta.password                                                      :-  SCNLFECD
+|   minuta.port                                                          :-  1414
+|   minuta.queueManager                                                  :-  QM_broker01_DES
+|   minuta.username                                                      :-  SCNLFECD
+|   module.path                                                          :-  C:/Kit/jboss-eap-6.3.2/modules
+|   org.apache.xml.security.ignoreLineBreaks                             :-  true
+|   org.jboss.boot.log.file                                              :-  C:/Kit/jboss-eap-6.3.2/standalone/log/boot.log
+|   org.jboss.com.sun.CORBA.ORBUseDynamicStub                            :-  true
+|   org.jboss.logmanager.nocolor                                         :-  true
+|   org.jboss.resolver.warning                                           :-  true
+|   org.jboss.security.context.ThreadLocal                               :-  true
+|   org.xml.sax.driver                                                   :-  __redirected.__XMLReaderFactory
+|   os.arch                                                              :-  amd64
+|   os.name                                                              :-  Windows 7
+|   os.version                                                           :-  6.1
+|   path.separator                                                       :-  ;
+|   program.name                                                         :-  JBossTools: Red Hat JBoss EAP 6.3.2
+|   sun.arch.data.model                                                  :-  64
+|   sun.boot.class.path                                                  :-  C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes
+|   sun.boot.library.path                                                :-  C:\Program Files\Java\jdk1.8.0_131\jre\bin
+|   sun.cpu.endian                                                       :-  little
+|   sun.cpu.isalist                                                      :-  amd64
+|   sun.desktop                                                          :-  windows
+|   sun.io.unicode.encoding                                              :-  UnicodeLittle
+|   sun.java.command                                                     :-  org.jboss.modules.Main -mp C:/Kit/jboss-eap-6.3.2/modules -jaxpmodule javax.xml.jaxp-provider -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=C:\Kit\jboss-eap-6.3.2\standalone
+|   sun.java.launcher                                                    :-  SUN_STANDARD
+|   sun.jnu.encoding                                                     :-  Cp1252
+|   sun.management.compiler                                              :-  HotSpot 64-Bit Tiered Compilers
+|   sun.nio.ch.bugLevel                                                  :-  
+|   sun.os.patch.level                                                   :-  Service Pack 1
+|   sun.rmi.dgc.client.gcInterval                                        :-  3600000
+|   sun.rmi.dgc.server.gcInterval                                        :-  3600000
+|   urlConsultaBoleto                                                    :-  http://localhost:8080/fec-web/emprest/consultaBoleto/consulaBoletoRegistrado
+|   user.country                                                         :-  BR
+|   user.dir                                                             :-  C:\Kit\jboss-eap-6.3.2\bin
+|   user.home                                                            :-  C:\Users\julio.usantos
+|   user.language                                                        :-  pt
+|   user.name                                                            :-  julio.usantos
+|   user.script                                                          :-  
+|   user.timezone                                                        :-  America/Sao_Paulo
+|   user.variant                                                         :-  
+
+                           WorkQueueMananger Contents
+                           --------------------------
+
+|   Current ThreadPool size      :-  2
+|   Maintain ThreadPool size     :-  false
+|   Maximum ThreadPool size      :-  -1
+|   ThreadPool inactive timeout  :-  0
+
+                               Runtime properties
+                               ------------------
+
+|   Available processors         :-  4
+|   Free memory in bytes (now)   :-  667702960
+|   Max memory in bytes          :-  1032847360
+|   Total memory in bytes (now)  :-  1032847360
+
+                           Component Manager Contents
+                           --------------------------
+
+Common Services Components:
+|   CMVC               :-  p750-004-140807
+|   Class Name         :-  class com.ibm.msg.client.commonservices.j2se.J2SEComponent
+|   Component Name     :-  com.ibm.msg.client.commonservices.j2se
+|   Component Title    :-  Common Services for Java Platform, Standard Edition
+|   Factory Class      :-  class com.ibm.msg.client.commonservices.j2se.CommonServicesImplementation
+|   Version            :-  7.5.0.4
+|   inPreferenceTo[0]  :-  com.ibm.msg.client.commonservices.j2me
+
+Messaging Provider Components:
+|   CMVC             :-  p750-004-140807
+|   Class Name       :-  class com.ibm.msg.client.wmq.factories.WMQComponent
+|   Component Name   :-  com.ibm.msg.client.wmq
+|   Component Title  :-  IBM WebSphere MQ JMS Provider
+|   Factory Class    :-  class com.ibm.msg.client.wmq.factories.WMQFactoryFactory
+|   Version          :-  7.5.0.4
+
+
+
+
+                         Provider Specific Information
+                         -----------------------------
+
+Overview of JMS System
+Num. Connections : 1
+Num. Sessions    : 1
+Num. Consumers   : 0
+Num. Producers   : 0
+
+Detailed JMS System Information
+Connections      : 
+|   Instance           :-  com.ibm.msg.client.wmq.internal.WMQXAConnection@64c361cf
+|   connectOptions     :-  version:5 options:64 option flags:'MQCNO_HANDLE_SHARE_BLOCK' clientConn:[channelName:'SIEMP.SVRCONN' version:10 channelType:6 transportType:2 desc:'<null>' qMgrName:'BRD5' xmitQName:'<null>' connectionName:'brd5brk.desenvolvimento.extracaixa(1418)' mcaName:'<null>' modeName:'<null>' tpName:'<null>' batchSize:50 discInterval:6000 shortRetryCount:10 shortRetryInterval:60 longRetryCount:999999999 longRetryInterval:1200 seqNumberWrap:99999999 maxMsgLength:104857600 putAuthority:1 dataConversion:0 userIdentifier:'<null>' password:'<null>' mcaUserIdentifier:'<null>' mcaType:1 remoteUserIdentifier:'SFECEMPD' msgRetryExit:'<null>' msgRetryUserData:'<null>' msgRetryCount:10 heartbeatInterval:1 batchInterval:0 nonPersistentMsgSpeed:2 clustersDefined:0 networkPriority:0 mcaSecurityId:00000000000000000000000000000000000000000000000000000000000000000000000000000000 remoteSecurityId:00000000000000000000000000000000000000000000000000000000000000000000000000000000 sslCipherSpec:'<null>' sslPeerName:'<null>' sslClientAuth:0 keepAliveInterval:-1 localAddress:'<null>' batchHeartbeat:0 hdrCompList:(0,-1)msgCompList:(0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1)clwlChannelRank:0 clwlChannelPriority:0 clwlChannelWeight:50 channelMonitoring:0 channelStatistics:0 exitNameLength:128 exitDataLength:32 sendExitsDefined:0 sendExit:'<null>' sendUserData:0000000000000000000000000000000000000000000000000000000000000000 sendExitPtr:<null> sendUserDataPtr:<null> receiveExitsDefined:0 receiveExit:'<null>' receiveUserData:0000000000000000000000000000000000000000000000000000000000000000 receiveExitPtr:<null> ReceiveUserDataPtr:<null> SharingConversations:999999999 propertyControl:0 maxInstances:999999999 maxInstancesPerClient:999999999 clientChannelWeight:0 connectionAffinity:1 batchDataLimit:5000 useDLQ:2 defReconnect:0 ] connTag:0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 sslConfig:[version:1 keyRepository:'<null>' cryptoHardware:'<null>' authInfoRecCount:0 keyResetCount:0 fipsRequired:0 encryptionPolicySuiteB:(1,0,0,0)certificateValPolicy:0 ] connectionId:C3E2D8C3C2D9C4F54040404040404040D2A896B05FB60001 securityParms:[<null>] 
+|   exceptionListener  :-  com.ibm.msg.client.jms.internal.JmsProviderExceptionListener@389659b6
+|   helper             :-  com.ibm.msg.client.wmq.internal.WMQConsumerOwnerShadow@6c07348b
+|   queueManagerName   :-  BRD5
+|   tempQPrefix        :-  <null>
+|   temporaryModelQ    :-  <null>
+|   XMSC_ADMIN_OBJECT_TYPE              :-  84
+|   XMSC_ASYNC_EXCEPTIONS               :-  -1
+|   XMSC_CLIENT_ID                      :-  <null>
+|   XMSC_CONNECTION_TYPE                :-  1
+|   XMSC_CONNECTION_TYPE_NAME           :-  com.ibm.msg.client.wmq
+|   XMSC_OBJECT_IDENTITY                :-  974415577
+|   XMSC_PASSWORD                       :-  ********
+|   XMSC_RTT_DIRECT_AUTH                :-  0
+|   XMSC_RTT_PROXY_HOSTNAME             :-  <null>
+|   XMSC_RTT_PROXY_PORT                 :-  443
+|   XMSC_USERID                         :-  SFECEMPD
+|   XMSC_WMQ_BROKER_CC_SUBQ             :-  SYSTEM.JMS.ND.CC.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_BROKER_CONTROLQ            :-  SYSTEM.BROKER.CONTROL.QUEUE
+|   XMSC_WMQ_BROKER_PUBQ                :-  SYSTEM.BROKER.DEFAULT.STREAM
+|   XMSC_WMQ_BROKER_QMGR                :-  
+|   XMSC_WMQ_BROKER_SUBQ                :-  SYSTEM.JMS.ND.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_CCDTURL                    :-  <null>
+|   XMSC_WMQ_CF_DESCRIPTION             :-  <null>
+|   XMSC_WMQ_CHANNEL                    :-  SIEMP.SVRCONN
+|   XMSC_WMQ_CLEANUP_INTERVAL           :-  3600000
+|   XMSC_WMQ_CLEANUP_LEVEL              :-  1
+|   XMSC_WMQ_CLIENT_RECONNECT_OPTIONS   :-  33554432
+|   XMSC_WMQ_CLIENT_RECONNECT_TIMEOUT   :-  1800
+|   XMSC_WMQ_CLONE_SUPPORT              :-  0
+|   XMSC_WMQ_CONNECTION_MODE            :-  1
+|   XMSC_WMQ_CONNECTION_NAME_LIST_INT   :-  brd5brk.desenvolvimento.extracaixa(1418)
+|   XMSC_WMQ_CONNECTION_TAG             :-  [B@3f304df4
+|   XMSC_WMQ_CONNECT_OPTIONS            :-  0
+|   XMSC_WMQ_HEADER_COMP                :-  NONE
+|   XMSC_WMQ_LOCAL_ADDRESS              :-  <null>
+|   XMSC_WMQ_MAP_NAME_STYLE             :-  true
+|   XMSC_WMQ_MAX_BUFFER_SIZE            :-  1000
+|   XMSC_WMQ_MESSAGE_RETENTION          :-  1
+|   XMSC_WMQ_MESSAGE_SELECTION          :-  0
+|   XMSC_WMQ_MSG_BATCH_SIZE             :-  10
+|   XMSC_WMQ_MSG_COMP                   :-  NONE
+|   XMSC_WMQ_OPT_PUB                    :-  false
+|   XMSC_WMQ_OUTCOME_NOTIFICATION       :-  true
+|   XMSC_WMQ_POLLING_INTERVAL           :-  5000
+|   XMSC_WMQ_PROCESS_DURATION           :-  0
+|   XMSC_WMQ_PROVIDER_VERSION           :-  7
+|   XMSC_WMQ_PUB_ACK_INTERVAL           :-  25
+|   XMSC_WMQ_QMGR_CCSID                 :-  819
+|   XMSC_WMQ_QUEUE_MANAGER              :-  BRD5
+|   XMSC_WMQ_RECEIVE_EXIT               :-  <null>
+|   XMSC_WMQ_RECEIVE_EXIT_INIT          :-  <null>
+|   XMSC_WMQ_RECEIVE_ISOLATION          :-  0
+|   XMSC_WMQ_REMOTE_QMGR_QSGNAME        :-  QSD1
+|   XMSC_WMQ_RESCAN_INTERVAL            :-  5000
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER     :-  BRD5
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER_ID  :-  BRD5.C6730A4BF0BF1F93                           
+|   XMSC_WMQ_SECURITY_EXIT              :-  <null>
+|   XMSC_WMQ_SECURITY_EXIT_INIT         :-  <null>
+|   XMSC_WMQ_SEND_CHECK_COUNT           :-  0
+|   XMSC_WMQ_SEND_EXIT                  :-  <null>
+|   XMSC_WMQ_SEND_EXIT_INIT             :-  <null>
+|   XMSC_WMQ_SHARE_CONV_ALLOWED         :-  1
+|   XMSC_WMQ_SPARSE_SUBSCRIPTIONS       :-  false
+|   XMSC_WMQ_SSL_CERT_STORES_COL        :-  <null>
+|   XMSC_WMQ_SSL_CERT_STORES_STR        :-  <null>
+|   XMSC_WMQ_SSL_CIPHER_SUITE           :-  <null>
+|   XMSC_WMQ_SSL_FIPS_REQUIRED          :-  false
+|   XMSC_WMQ_SSL_KEY_RESETCOUNT         :-  0
+|   XMSC_WMQ_SSL_PEER_NAME              :-  <null>
+|   XMSC_WMQ_SSL_SOCKET_FACTORY         :-  <null>
+|   XMSC_WMQ_STATUS_REFRESH_INTERVAL    :-  60000
+|   XMSC_WMQ_SUBSCRIPTION_STORE         :-  2
+|   XMSC_WMQ_SYNCPOINT_ALL_GETS         :-  false
+|   XMSC_WMQ_TARGET_CLIENT_MATCHING     :-  true
+|   XMSC_WMQ_TEMPORARY_MODEL            :-  SYSTEM.DEFAULT.MODEL.QUEUE
+|   XMSC_WMQ_TEMP_Q_PREFIX              :-  
+|   XMSC_WMQ_TEMP_TOPIC_PREFIX          :-  
+|   XMSC_WMQ_USE_CONNECTION_POOLING     :-  false
+|   brokerVersion                       :-  0
+|   failIfQuiesce                       :-  1
+|   multicast                           :-  0
+|   putAsyncAllowed                     :-  -1
+|   readAheadAllowed                    :-  -1
+|   version                             :-  7
+|   wildcardFormat                      :-  0
+
+Sessions         : 
+|   Instance           :-  com.ibm.msg.client.wmq.internal.WMQSession@495f2a4e
+|   Parent Connection  :-  com.ibm.msg.client.wmq.internal.WMQXAConnection@64c361cf
+|   ackMode            :-  1
+|   asfConsumer        :-  <null>
+|   asfDestination     :-  <null>
+|   asfSubName         :-  <null>
+|   asyncPutCounter    :-  com.ibm.msg.client.wmq.internal.WMQSession$AsyncPutCounter@438e913a
+|   didRecovAsyncPut   :-  false
+|   helper             :-  com.ibm.msg.client.wmq.internal.WMQConsumerOwnerShadow@16f846ac
+|   inSyncpoint        :-  false
+|   queueManagerName   :-  BRD5
+|   XMSC_ACKNOWLEDGE_MODE               :-  1
+|   XMSC_ADMIN_OBJECT_TYPE              :-  20
+|   XMSC_ASYNC_EXCEPTIONS               :-  -1
+|   XMSC_CLIENT_ID                      :-  <null>
+|   XMSC_CONNECTION_TYPE                :-  1
+|   XMSC_CONNECTION_TYPE_NAME           :-  com.ibm.msg.client.wmq
+|   XMSC_OBJECT_IDENTITY                :-  986504599
+|   XMSC_PASSWORD                       :-  ********
+|   XMSC_RTT_DIRECT_AUTH                :-  0
+|   XMSC_RTT_PROXY_HOSTNAME             :-  <null>
+|   XMSC_RTT_PROXY_PORT                 :-  443
+|   XMSC_TRANSACTED                     :-  false
+|   XMSC_USERID                         :-  SFECEMPD
+|   XMSC_WMQ_BROKER_CC_SUBQ             :-  SYSTEM.JMS.ND.CC.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_BROKER_CONTROLQ            :-  SYSTEM.BROKER.CONTROL.QUEUE
+|   XMSC_WMQ_BROKER_PUBQ                :-  SYSTEM.BROKER.DEFAULT.STREAM
+|   XMSC_WMQ_BROKER_QMGR                :-  
+|   XMSC_WMQ_BROKER_SUBQ                :-  SYSTEM.JMS.ND.SUBSCRIBER.QUEUE
+|   XMSC_WMQ_CCDTURL                    :-  <null>
+|   XMSC_WMQ_CF_DESCRIPTION             :-  <null>
+|   XMSC_WMQ_CHANNEL                    :-  SIEMP.SVRCONN
+|   XMSC_WMQ_CLEANUP_INTERVAL           :-  3600000
+|   XMSC_WMQ_CLEANUP_LEVEL              :-  1
+|   XMSC_WMQ_CLIENT_RECONNECT_OPTIONS   :-  33554432
+|   XMSC_WMQ_CLIENT_RECONNECT_TIMEOUT   :-  1800
+|   XMSC_WMQ_CLONE_SUPPORT              :-  0
+|   XMSC_WMQ_CONNECTION_MODE            :-  1
+|   XMSC_WMQ_CONNECTION_NAME_LIST_INT   :-  brd5brk.desenvolvimento.extracaixa(1418)
+|   XMSC_WMQ_CONNECTION_TAG             :-  [B@3f304df4
+|   XMSC_WMQ_CONNECT_OPTIONS            :-  0
+|   XMSC_WMQ_HEADER_COMP                :-  NONE
+|   XMSC_WMQ_LOCAL_ADDRESS              :-  <null>
+|   XMSC_WMQ_MAP_NAME_STYLE             :-  true
+|   XMSC_WMQ_MAX_BUFFER_SIZE            :-  1000
+|   XMSC_WMQ_MESSAGE_RETENTION          :-  1
+|   XMSC_WMQ_MESSAGE_SELECTION          :-  0
+|   XMSC_WMQ_MSG_BATCH_SIZE             :-  10
+|   XMSC_WMQ_MSG_COMP                   :-  NONE
+|   XMSC_WMQ_OPT_PUB                    :-  false
+|   XMSC_WMQ_OUTCOME_NOTIFICATION       :-  true
+|   XMSC_WMQ_POLLING_INTERVAL           :-  5000
+|   XMSC_WMQ_PROCESS_DURATION           :-  0
+|   XMSC_WMQ_PROVIDER_VERSION           :-  7
+|   XMSC_WMQ_PUB_ACK_INTERVAL           :-  25
+|   XMSC_WMQ_QMGR_CCSID                 :-  819
+|   XMSC_WMQ_QUEUE_MANAGER              :-  BRD5
+|   XMSC_WMQ_RECEIVE_EXIT               :-  <null>
+|   XMSC_WMQ_RECEIVE_EXIT_INIT          :-  <null>
+|   XMSC_WMQ_RECEIVE_ISOLATION          :-  0
+|   XMSC_WMQ_REMOTE_QMGR_QSGNAME        :-  QSD1
+|   XMSC_WMQ_RESCAN_INTERVAL            :-  5000
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER     :-  BRD5
+|   XMSC_WMQ_RESOLVED_QUEUE_MANAGER_ID  :-  BRD5.C6730A4BF0BF1F93                           
+|   XMSC_WMQ_SECURITY_EXIT              :-  <null>
+|   XMSC_WMQ_SECURITY_EXIT_INIT         :-  <null>
+|   XMSC_WMQ_SEND_CHECK_COUNT           :-  0
+|   XMSC_WMQ_SEND_EXIT                  :-  <null>
+|   XMSC_WMQ_SEND_EXIT_INIT             :-  <null>
+|   XMSC_WMQ_SHARE_CONV_ALLOWED         :-  1
+|   XMSC_WMQ_SPARSE_SUBSCRIPTIONS       :-  false
+|   XMSC_WMQ_SSL_CERT_STORES_COL        :-  <null>
+|   XMSC_WMQ_SSL_CERT_STORES_STR        :-  <null>
+|   XMSC_WMQ_SSL_CIPHER_SUITE           :-  <null>
+|   XMSC_WMQ_SSL_FIPS_REQUIRED          :-  false
+|   XMSC_WMQ_SSL_KEY_RESETCOUNT         :-  0
+|   XMSC_WMQ_SSL_PEER_NAME              :-  <null>
+|   XMSC_WMQ_SSL_SOCKET_FACTORY         :-  <null>
+|   XMSC_WMQ_STATUS_REFRESH_INTERVAL    :-  60000
+|   XMSC_WMQ_SUBSCRIPTION_STORE         :-  2
+|   XMSC_WMQ_SYNCPOINT_ALL_GETS         :-  false
+|   XMSC_WMQ_TARGET_CLIENT_MATCHING     :-  true
+|   XMSC_WMQ_TEMPORARY_MODEL            :-  SYSTEM.DEFAULT.MODEL.QUEUE
+|   XMSC_WMQ_TEMP_Q_PREFIX              :-  
+|   XMSC_WMQ_TEMP_TOPIC_PREFIX          :-  
+|   XMSC_WMQ_USE_CONNECTION_POOLING     :-  false
+|   brokerVersion                       :-  0
+|   failIfQuiesce                       :-  1
+|   multicast                           :-  0
+|   putAsyncAllowed                     :-  -1
+|   readAheadAllowed                    :-  -1
+|   version                             :-  7
+|   wildcardFormat                      :-  0
+
+Consumers        : 
+Producers        : 
+
+All Thread Information
+
+                          Name : Timer-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 165
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.util.TimerThread.mainLoop(Timer.java:552)
+                               : java.util.TimerThread.run(Timer.java:505)
+
+                          Name : OOB-13,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 185
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : transport-thread-0
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 164
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-13
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 156
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : ajp-/127.0.0.1:8009-Acceptor-0
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 106
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainSocketImpl.socketAccept(TwoStacksPlainSocketImpl.java:-2)
+                               : java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+                               : java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+                               : java.net.ServerSocket.implAccept(ServerSocket.java:545)
+                               : java.net.ServerSocket.accept(ServerSocket.java:513)
+                               : org.apache.tomcat.util.net.DefaultServerSocketFactory.acceptSocket(DefaultServerSocketFactory.java:61)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:312)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : MSC service thread 1-2
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 17
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : unicast receiver,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 132
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainDatagramSocketImpl.receive0(TwoStacksPlainDatagramSocketImpl.java:-2)
+                               : java.net.TwoStacksPlainDatagramSocketImpl.receive(TwoStacksPlainDatagramSocketImpl.java:114)
+                               : java.net.DatagramSocket.receive(DatagramSocket.java:812)
+                               : org.jgroups.protocols.UDP$PacketReceiver.run(UDP.java:676)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : RequestController-2
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 151
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : org.jacorb.poa.RequestController.waitForQueue(RequestController.java:586)
+                               : org.jacorb.poa.RequestController.run(RequestController.java:503)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-5
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 126
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : ContainerBackgroundProcessor[StandardEngine[jboss.web]]
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 95
+                         State : TIMED_WAITING
+                         Stack : java.lang.Thread.sleep(Thread.java:-2)
+                               : org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1563)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : MSC service thread 1-5
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 20
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Transaction Reaper Worker 0
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 115
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : com.arjuna.ats.arjuna.coordinator.TransactionReaper.waitForCancellations(TransactionReaper.java:321)
+                               : com.arjuna.ats.internal.arjuna.coordinator.ReaperWorkerThread.run(ReaperWorkerThread.java:65)
+
+                          Name : Incoming-4,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 195
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : IdleRemover
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 91
+                         State : TIMED_WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2163)
+                               : org.jboss.jca.core.connectionmanager.pool.idle.IdleRemover$IdleRemoverRunner.run(IdleRemover.java:261)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-10,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 180
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Finalizer
+                      Priority : 8
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 3
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                               : java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+                          Name : MSC service thread 1-4
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 19
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Timer-0
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 102
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : java.util.TimerThread.mainLoop(Timer.java:526)
+                               : java.util.TimerThread.run(Timer.java:505)
+
+                          Name : MSC service thread 1-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 16
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-Poller
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 107
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Poller.run(JIoEndpoint.java:735)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-12,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 204
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-3,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 138
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-11,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 181
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-8
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 136
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-15,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 187
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Timer-1,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 116
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-18,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 214
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : ORB Run Thread
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 143
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : org.jacorb.orb.ORB.run(ORB.java:1417)
+                               : org.jboss.as.jacorb.service.CorbaORBService$ORBRunner.run(CorbaORBService.java:231)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-5
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 175
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-14,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 186
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-17,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 191
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-6
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 129
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-4
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 125
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-18,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 192
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-12,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 184
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-15,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 208
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-11,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 203
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-6,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 198
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Timer-4,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 130
+                         State : TIMED_WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-19,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 219
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Timer-3,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 128
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-6,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 170
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Timer-2,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 127
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-1,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 182
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Transaction Reaper
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 114
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : com.arjuna.ats.internal.arjuna.coordinator.ReaperThread.run(ReaperThread.java:90)
+
+                          Name : OOB-9,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 179
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : AOMRemoval
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 150
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.jacorb.poa.AOM$1.run(AOM.java:120)
+
+                          Name : RequestController-3
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 154
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : org.jacorb.poa.RequestController.waitForQueue(RequestController.java:586)
+                               : org.jacorb.poa.RequestController.run(RequestController.java:503)
+
+                          Name : ServerSocketListener
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 148
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainSocketImpl.socketAccept(TwoStacksPlainSocketImpl.java:-2)
+                               : java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+                               : java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+                               : java.net.ServerSocket.implAccept(ServerSocket.java:545)
+                               : java.net.ServerSocket.accept(ServerSocket.java:513)
+                               : org.jacorb.orb.iiop.IIOPListener$Acceptor.run(IIOPListener.java:467)
+
+                          Name : DeploymentScanner-threads - 2
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=DeploymentScanner-threads,maxpri=10]
+                            ID : 60
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+                               : org.jboss.threads.JBossThread.run(JBossThread.java:122)
+
+                          Name : Incoming-17,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 213
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : JMSCCThreadPoolMaster
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 226
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:660)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.waitForNotification(WorkQueueManagerImplementation.java:629)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$WorkQueueManagerThread.run(WorkQueueManagerImplementation.java:897)
+
+                          Name : Incoming-20,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 220
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Thread-81
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 112
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(WindowsSelectorImpl.java:-2)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+                               : sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : org.jboss.sun.net.httpserver.ServerImpl$Dispatcher.run(ServerImpl.java:382)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : DispatchThread: [com.ibm.mq.jmqi.remote.impl.RemoteSession[connectionId=C3E2D8C3C2D9C4F54040404040404040D2A896B05FB60001]]
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=JMSCCThreadPool,maxpri=10]
+                            ID : 230
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : com.ibm.mq.jmqi.remote.impl.RemoteDispatchThread.waitOnSleepingEvent(RemoteDispatchThread.java:151)
+                               : com.ibm.mq.jmqi.remote.impl.RemoteDispatchThread.sleepPhase(RemoteDispatchThread.java:640)
+                               : com.ibm.mq.jmqi.remote.impl.RemoteDispatchThread.run(RemoteDispatchThread.java:385)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:214)
+                               : com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:105)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:229)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:303)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1219)
+
+                          Name : Incoming-10,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 202
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Reference Reaper
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 13
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                               : org.jboss.modules.ref.References$ReaperThread.run(References.java:68)
+
+                          Name : http-/127.0.0.1:8080-3
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 173
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-2,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 183
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Signal Dispatcher
+                      Priority : 9
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 4
+                         State : RUNNABLE
+
+                          Name : ServerDeploymentRepository-temp-threads - 2
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerDeploymentRepository-temp-threads,maxpri=10]
+                            ID : 25
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+                               : org.jboss.threads.JBossThread.run(JBossThread.java:122)
+
+                          Name : ConnectionValidator
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 92
+                         State : TIMED_WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2163)
+                               : org.jboss.jca.core.connectionmanager.pool.validator.ConnectionValidator$ConnectionValidatorRunner.run(ConnectionValidator.java:263)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-Acceptor-0
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 108
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainSocketImpl.socketAccept(TwoStacksPlainSocketImpl.java:-2)
+                               : java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+                               : java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+                               : java.net.ServerSocket.implAccept(ServerSocket.java:545)
+                               : java.net.ServerSocket.accept(ServerSocket.java:513)
+                               : org.apache.tomcat.util.net.DefaultServerSocketFactory.acceptSocket(DefaultServerSocketFactory.java:61)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:312)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-3,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 194
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-9,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 201
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Transaction Expired Entry Monitor
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 110
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : com.arjuna.ats.internal.arjuna.recovery.ExpiredEntryMonitor.run(ExpiredEntryMonitor.java:190)
+
+                          Name : Incoming-14,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 206
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : MSC service thread 1-3
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 18
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-2,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 137
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-12
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 146
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : ajp-/127.0.0.1:8009-Poller
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 105
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Poller.run(JIoEndpoint.java:735)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-2
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 172
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Attach Listener
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 5
+                         State : RUNNABLE
+
+                          Name : multicast receiver,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 133
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainDatagramSocketImpl.receive0(TwoStacksPlainDatagramSocketImpl.java:-2)
+                               : java.net.TwoStacksPlainDatagramSocketImpl.receive(TwoStacksPlainDatagramSocketImpl.java:114)
+                               : java.net.DatagramSocket.receive(DatagramSocket.java:812)
+                               : org.jgroups.protocols.UDP$PacketReceiver.run(UDP.java:676)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-8,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 178
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-7
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 189
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.await(JIoEndpoint.java:881)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:907)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-4,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 168
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-16
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 159
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-16,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 190
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-7,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 199
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-7,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 171
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-2
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 122
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-7
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 131
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : MSC service thread 1-8
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 23
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 113
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-14
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 157
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-8
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 216
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : RequestController-1
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 147
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : org.jacorb.poa.RequestController.waitForQueue(RequestController.java:586)
+                               : org.jacorb.poa.RequestController.run(RequestController.java:503)
+
+                          Name : Incoming-5,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 197
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-16,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 209
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : AOMRemoval
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 153
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.jacorb.poa.AOM$1.run(AOM.java:120)
+
+                          Name : MSC service thread 1-6
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 21
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-1,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 135
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" write-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 97
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(WindowsSelectorImpl.java:-2)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+                               : sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+                               : org.xnio.nio.WorkerThread.run(WorkerThread.java:164)
+
+                          Name : http-/127.0.0.1:8080-6
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 176
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-3
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 124
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-13,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 205
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : http-/127.0.0.1:8080-4
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 174
+                         State : RUNNABLE
+                         Stack : java.net.SocketInputStream.socketRead0(SocketInputStream.java:-2)
+                               : java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:171)
+                               : java.net.SocketInputStream.read(SocketInputStream.java:141)
+                               : org.apache.coyote.http11.InternalInputBuffer.fill(InternalInputBuffer.java:713)
+                               : org.apache.coyote.http11.InternalInputBuffer.parseRequestLine(InternalInputBuffer.java:351)
+                               : org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:821)
+                               : org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:653)
+                               : org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:926)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : JMSCCThreadPoolWorker-3
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=JMSCCThreadPool,maxpri=10]
+                            ID : 231
+                         State : RUNNABLE
+                         Stack : java.lang.Thread.dumpThreads(Thread.java:-2)
+                               : java.lang.Thread.getAllStackTraces(Thread.java:1610)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.generateThreadInfo(DefaultTracer.java:1145)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.access$1200(DefaultTracer.java:155)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer$8.run(DefaultTracer.java:1100)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer$8.run(DefaultTracer.java:1027)
+                               : java.security.AccessController.doPrivileged(AccessController.java:-2)
+                               : com.ibm.msg.client.commonservices.j2se.trace.DefaultTracer.ffst(DefaultTracer.java:1025)
+                               : com.ibm.msg.client.commonservices.j2se.wmqsupport.TracerImpl.ffst(TracerImpl.java:142)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffstInternal(Trace.java:1800)
+                               : com.ibm.msg.client.commonservices.trace.Trace.ffst(Trace.java:1619)
+                               : com.ibm.msg.client.jms.internal.JmsProviderExceptionListener.run(JmsProviderExceptionListener.java:441)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.runTask(WorkQueueItem.java:214)
+                               : com.ibm.msg.client.commonservices.workqueue.SimpleWorkQueueItem.runItem(SimpleWorkQueueItem.java:105)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueItem.run(WorkQueueItem.java:229)
+                               : com.ibm.msg.client.commonservices.workqueue.WorkQueueManager.runWorkQueueItem(WorkQueueManager.java:303)
+                               : com.ibm.msg.client.commonservices.j2se.workqueue.WorkQueueManagerImplementation$ThreadPoolWorker.run(WorkQueueManagerImplementation.java:1219)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-15
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 158
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850" write-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 99
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(WindowsSelectorImpl.java:-2)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+                               : sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+                               : org.xnio.nio.WorkerThread.run(WorkerThread.java:164)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" read-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 96
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(WindowsSelectorImpl.java:-2)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+                               : sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+                               : org.xnio.nio.WorkerThread.run(WorkerThread.java:164)
+
+                          Name : TxCleanupService,sso,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 163
+                         State : TIMED_WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : MSC service thread 1-7
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 22
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-20,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 196
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-10
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 142
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : FD_SOCK acceptor,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 134
+                         State : RUNNABLE
+                         Stack : java.net.TwoStacksPlainSocketImpl.socketAccept(TwoStacksPlainSocketImpl.java:-2)
+                               : java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+                               : java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+                               : java.net.ServerSocket.implAccept(ServerSocket.java:545)
+                               : java.net.ServerSocket.accept(ServerSocket.java:513)
+                               : org.jgroups.protocols.FD_SOCK$ServerSocketHandler.run(FD_SOCK.java:1048)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-9
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 141
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Periodic Recovery
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 111
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.doBackoffWait(PeriodicRecovery.java:657)
+                               : com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.doWorkInternal(PeriodicRecovery.java:759)
+                               : com.arjuna.ats.internal.arjuna.recovery.PeriodicRecovery.run(PeriodicRecovery.java:371)
+
+                          Name : DestroyJavaVM
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 27
+                         State : RUNNABLE
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 121
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Remoting "nbtitma121850" read-1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 98
+                         State : RUNNABLE
+                         Stack : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(WindowsSelectorImpl.java:-2)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+                               : sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+                               : sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+                               : sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+                               : sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+                               : org.xnio.nio.WorkerThread.run(WorkerThread.java:164)
+
+                          Name : Reference Handler
+                      Priority : 10
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 2
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.Object.wait(Object.java:502)
+                               : java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+                               : java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+                          Name : AOMRemoval
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 144
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : org.jacorb.poa.AOM$1.run(AOM.java:120)
+
+                          Name : Remoting "nbtitma121850:MANAGEMENT" task-11
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 145
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : OOB-19,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 193
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Incoming-8,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 200
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : ServerDeploymentRepository-temp-threads - 1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerDeploymentRepository-temp-threads,maxpri=10]
+                            ID : 24
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+                               : org.jboss.threads.JBossThread.run(JBossThread.java:122)
+
+                          Name : OOB-5,web,nbtitma121850/web
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=ServerService ThreadGroup,maxpri=10]
+                            ID : 169
+                         State : WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:458)
+                               : java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+                               : java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:924)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+
+                          Name : Buffer reclamation thread
+                      Priority : 8
+                   ThreadGroup : java.lang.ThreadGroup[name=system,maxpri=10]
+                            ID : 161
+                         State : WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+                               : java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+                               : org.xnio.ByteBufferSlicePool$QueueThread.run(ByteBufferSlicePool.java:195)
+
+                          Name : server-timer
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=main,maxpri=10]
+                            ID : 109
+                         State : TIMED_WAITING
+                         Stack : java.lang.Object.wait(Object.java:-2)
+                               : java.util.TimerThread.mainLoop(Timer.java:552)
+                               : java.util.TimerThread.run(Timer.java:505)
+
+                          Name : DeploymentScanner-threads - 1
+                      Priority : 5
+                   ThreadGroup : java.lang.ThreadGroup[name=DeploymentScanner-threads,maxpri=10]
+                            ID : 59
+                         State : TIMED_WAITING
+                         Stack : sun.misc.Unsafe.park(Unsafe.java:-2)
+                               : java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+                               : java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+                               : java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+                               : java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+                               : java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+                               : java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+                               : java.lang.Thread.run(Thread.java:748)
+                               : org.jboss.threads.JBossThread.run(JBossThread.java:122)
+
+First Failure Symptom Report completed at Thu Jun 08 18:01:53 BRT 2017
+------------------------------------END FFST------------------------------------
